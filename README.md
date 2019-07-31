@@ -5,7 +5,7 @@ Repositório para o projeto integrador III do curso de engenharia eletrônica do
 
 ### Pedal simulador de caixa Leslie
 
-Circuito analógico, com controle digital de velocidade.
+Circuito analógico, com controle digital de velocidade para sincronização com BPM.
 ![Foto](https://2.bp.blogspot.com/-mL9AckHYdmQ/WniN47mAiwI/AAAAAAAAFA8/voqrqtyQam8Xzzmubx87KRZPkb8YrZk7wCLcBGAs/s1600/rotary_fig1-1.png)
 
 ### Sintetizador
