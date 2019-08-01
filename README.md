@@ -5,7 +5,10 @@ Repositório para o projeto integrador III do curso de engenharia eletrônica do
 
 Recebe um sinal MIDI de um teclado controlador com as notas, gera as ondas digitalmente, podedo mixar 2 formas de onda
 para gerar o timbre, faz um envelpe ADSR (Atack, decay, sustain, release) e é preamplificado analogicamente.
+
+
 ![Foto](https://github.com/diogo0001/PI_III/blob/master/images/Diagram.png)
+
 
 
 ## Outras possíveis opções a serem escolhidas para o projeto
