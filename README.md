@@ -4,7 +4,8 @@ Repositório para o projeto integrador III do curso de engenharia eletrônica do
 ### Pedal simulador de caixa Leslie
 
 Efeito analógio que simula a rotação dos auto falantes de uma caixa Leslie. A frequência da modulação do sinal será
-controlada digitalmente para sincronização com BPM da música.
+controlada digitalmente para sincronização com BPM da música. Pode-se também, ao invés do circuito simulador, implementar
+a própria caixa numa escala menor, com apenas um auto falante. 
 
 #### Diagrama de blocos
 
@@ -21,7 +22,7 @@ controlada digitalmente para sincronização com BPM da música.
 ### Sintetizador digital
 
 Recebe um sinal MIDI de um teclado controlador com as informações das notas, gera as ondas digitalmente, podedo mixar 2 formas de onda
-para gerar o timbre. Faz um envelpe ADSR (Atack, decay, sustain, release) e é preamplificado analogicamente.
+para gerar o timbre. Faz um envelpe ADSR (Atack, decay, sustain, release) e é pré-amplificado analogicamente.
 
 ![Foto](https://github.com/diogo0001/PI_III/blob/master/images/Diagram.png)
 
