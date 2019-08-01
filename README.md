@@ -1,19 +1,19 @@
 # PI III
 Repositório para o projeto integrador III do curso de engenharia eletrônica do IFSC Florianópolis
 
-## Opções a serem escolhidas para o projeto
+### Sintetizador
+
+Recebe um sinal MIDI de um teclado controlador com as notas, gera as ondas digitalmente, podedo mixar 2 formas de onda
+para gerar o timbre, faz um envelpe ADSR (Atack, decay, sustain, release) e é preamplificado analogicamente.
+![Foto](https://static.wixstatic.com/media/941e6c_e433fe5f52164254b7d58f5605c76abc~mv2.png/v1/fill/w_600,h_300,al_c,q_80,usm_0.66_1.00_0.01/941e6c_e433fe5f52164254b7d58f5605c76abc~mv2.webp)
+
+
+## Outras possíveis opções a serem escolhidas para o projeto
 
 ### Pedal simulador de caixa Leslie
 
 Circuito analógico, com controle digital de velocidade para sincronização com BPM.
 ![Foto](https://2.bp.blogspot.com/-mL9AckHYdmQ/WniN47mAiwI/AAAAAAAAFA8/voqrqtyQam8Xzzmubx87KRZPkb8YrZk7wCLcBGAs/s1600/rotary_fig1-1.png)
-
-### Sintetizador
-
-Recebe um sinal MIDI de um teclado controlador, gera as ondas digitalmente e 
-pré-amplificador analógico.
-
-![Foto](https://static.wixstatic.com/media/941e6c_e433fe5f52164254b7d58f5605c76abc~mv2.png/v1/fill/w_600,h_300,al_c,q_80,usm_0.66_1.00_0.01/941e6c_e433fe5f52164254b7d58f5605c76abc~mv2.webp)
 
 ### Bateria eletrônica
 
