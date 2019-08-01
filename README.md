@@ -1,22 +1,26 @@
 # PI III
 Repositório para o projeto integrador III do curso de engenharia eletrônica do IFSC Florianópolis
 
-### Sintetizador
+### Pedal simulador de caixa Leslie
 
-Recebe um sinal MIDI de um teclado controlador com as informações das notas, gera as ondas digitalmente, podedo mixar 2 formas de onda
-para gerar o timbre. Faz um envelpe ADSR (Atack, decay, sustain, release) e é preamplificado analogicamente.
+Efeito analógio que simula a rotação dos auto falantes de uma caixa Leslie. A frequência é
+controlada digitalmente para sincronização com BPM da música.
 
+![Foto](https://github.com/diogo0001/PI_III/blob/master/images/Modulator%20Diagram.png)
 
-![Foto](https://github.com/diogo0001/PI_III/blob/master/images/Diagram.png)
-
+![Foto](https://2.bp.blogspot.com/-mL9AckHYdmQ/WniN47mAiwI/AAAAAAAAFA8/voqrqtyQam8Xzzmubx87KRZPkb8YrZk7wCLcBGAs/s1600/rotary_fig1-1.png)
 
 
 ## Outras possíveis opções a serem escolhidas para o projeto
 
-### Pedal simulador de caixa Leslie
 
-Circuito analógico, com controle digital de velocidade para sincronização com BPM.
-![Foto](https://2.bp.blogspot.com/-mL9AckHYdmQ/WniN47mAiwI/AAAAAAAAFA8/voqrqtyQam8Xzzmubx87KRZPkb8YrZk7wCLcBGAs/s1600/rotary_fig1-1.png)
+### Sintetizador digital
+
+Recebe um sinal MIDI de um teclado controlador com as informações das notas, gera as ondas digitalmente, podedo mixar 2 formas de onda
+para gerar o timbre. Faz um envelpe ADSR (Atack, decay, sustain, release) e é preamplificado analogicamente.
+
+![Foto](https://github.com/diogo0001/PI_III/blob/master/images/Diagram.png)
+
 
 ### Bateria eletrônica
 
