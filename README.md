@@ -4,8 +4,7 @@ Repositório para o projeto integrador III do curso de engenharia eletrônica do
 ### Pedal simulador de caixa Leslie
 
 Efeito analógio que simula a rotação dos auto falantes de uma caixa Leslie. A frequência da modulação do sinal será
-controlada digitalmente para sincronização com BPM da música. Pode-se também, ao invés do circuito simulador, implementar
-a própria caixa numa escala menor, com apenas um auto falante. 
+controlada digitalmente para sincronização com BPM da música. 
 
 #### Diagrama de blocos
 
