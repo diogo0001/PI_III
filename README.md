@@ -15,7 +15,7 @@ Um modular que pode ser utilizado com teclado também:
 
 ![Foto](https://upload.wikimedia.org/wikipedia/commons/e/e6/Moog_Modular_55_img2.jpg)
 
-Uma demostração de como funciona um sintetizador pode ser vista [aqui]().
+Uma demostração de como funciona um sintetizador pode ser vista [aqui](https://youtu.be/V_kiqQpiVjE?t=380).
 
 
 ### O Projeto
