@@ -40,7 +40,7 @@ Para este projeto, sinal MIDI é recebido de um teclado controlador com as infor
 
 Serão utilizados neste projeto:
 
-  - [Arduino DUE](https://store.arduino.cc/usa/due): microcontrolador de 32 bits, com DCA de 12 bits, que já é uma resolução satisfatória para a aplicação. 
+  - [Arduino DUE](https://store.arduino.cc/usa/due): microcontrolador de 32 bits, com DAC de 12 bits, que já é uma resolução satisfatória para a aplicação. 
   - [PlatformIO](https://platformio.org/): Ide para o desenvolvimento do código.
   - Instrumentação: gerador de sinal e osciloscópio para os testes.
   - Componentes eletrônicos: para a parte analógica.
