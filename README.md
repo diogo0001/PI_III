@@ -25,7 +25,7 @@ https://youtu.be/V_kiqQpiVjE?t=380
 ### Mercado
 
 Atualmente, estes instrumentos existem tanto puramente analógicos, como eram antigamente, e que possuem as melhores
-características em termos de qualidade e "pressão" no som. Existem os digitais, híbridos (analógico-digital), e VST
+características em termos de qualidade e "pressão" no som, segundo muitos. Existem os digitais, híbridos (analógico-digital), e VST
  (Virtual Studio Tecnology), que são instrumentos virtuais utilizados no computador.
 
 Geralmente possuem um preço elevado, dependendo muito da sua arquitetura e fabricante. O modelo que se norteará este projeto
