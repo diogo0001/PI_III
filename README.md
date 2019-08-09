@@ -48,9 +48,17 @@ Serão utilizados neste projeto:
   
   ### Referências
   
+  https://medium.com/@dennisstoelwinder/understanding-every-synthesizer-in-a-5-minute-read-7af0a4a3a920
+  
   https://hackaday.io/project/161618-cello-like-mostly-analog-synth/log/153824-vco-vca-vcf
   
   https://sound-au.com/articles/vca-techniques.html
   
   http://www.yusynth.net/Modular/EN/MOOGVCF/index.html
+  
+  https://www.soundonsound.com/techniques/synthesizing-strings-pwm-string-sounds
+  
+  https://www.soundonsound.com/techniques/modulation
+  
+  https://electricdruid.net/voltage-controlled-lfo-vclfo-9d/
  
