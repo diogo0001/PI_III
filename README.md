@@ -5,7 +5,7 @@ Repositório para o projeto integrador III do curso de engenharia eletrônica do
 
 É um instrumento musical que gera seus sons eletronicamente. Pode-se controlar diversos parâmetros para modelar o timbre
 e caracterizar vários aspectos do som. Existem diversos tipos e modelos de sintetizadores, que podem ser modulares ou 
-possuir uma interface para ser tocado (teclado por exemplo).
+possuir uma interface para ser tocado (teclado por exemplo). Podem ser mono ou polifônicos (uma ou mais notas simultaneamente).
 
 A seguir é mostrado um sintetizador com teclado:
 
@@ -15,7 +15,12 @@ Um modular que pode ser utilizado com teclado também:
 
 ![Foto](https://upload.wikimedia.org/wikipedia/commons/e/e6/Moog_Modular_55_img2.jpg)
 
-Uma demostração de como funciona um sintetizador pode ser vista [aqui](https://youtu.be/V_kiqQpiVjE?t=380).
+Uma demostração de como funciona um sintetizador pode ser vista nos links a seguir:
+
+https://www.youtube.com/watch?v=nOp25yIoPjo
+
+https://youtu.be/V_kiqQpiVjE?t=380
+
 
 ### Mercado
 
@@ -23,12 +28,21 @@ Atualmente, estes instrumentos existem tanto puramente analógicos, como eram an
 características em termos de qualidade e "pressão" no som. Existem os digitais, híbridos (analógico-digital), e VST
  (Virtual Studio Tecnology), que são instrumentos virtuais utilizados no computador.
 
-Geralmente possuem um preço elevado, dependendo muito da sua arquitetura e fabricante. 
-... continua
+Geralmente possuem um preço elevado, dependendo muito da sua arquitetura e fabricante. O modelo que se norteará este projeto
+é o [MiniMoog](https://en.wikipedia.org/wiki/Minimoog), que é um sintetizador monofônico extremamente popular desde os anos 70.
+
+o Minimoog:
+
+![Foto](https://upload.wikimedia.org/wikipedia/commons/2/22/Minimoog.JPG)
+
+[Este](https://produto.mercadolivre.com.br/MLB-1008756851-behringer-model-d-clone-mini-moog-entrega-a-partir-de-147-_JM) 
+é um simulador de MiniMoog da marca Behringer, o qual demonstra o tipo de produdo o qual se tentará desenvolver. 
+
 
 ## O Projeto - Sintetizador Híbrido
 
-O intuito deste projeto é desenvolver um sintetizador com seus blocos básicos (Vco, Vcf, Vca, LFO e envelopes), sem efeitos.
+O intuito deste projeto é desenvolver um sintetizador com seus blocos básicos (Vco, Vcf, Vca, LFO e envelopes), 
+monofônico e sem efeitos, como é um minimoog.
 
 A seguir é mostrado um diagrama de blocos padrão de um sintetizador:
 
@@ -47,6 +61,7 @@ Serão utilizados neste projeto:
   - Confecção PCI: para implementar o circuito.
   
   ### Referências
+  
   
   https://medium.com/@dennisstoelwinder/understanding-every-synthesizer-in-a-5-minute-read-7af0a4a3a920
   
