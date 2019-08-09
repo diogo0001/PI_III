@@ -7,7 +7,7 @@ Repositório para o projeto integrador III do curso de engenharia eletrônica do
 e caracterizar vários aspectos do som. Existem diversos tipos e modelos de sintetizadores, que podem ser modulares ou 
 possuir uma interface para ser tocado (teclado por exemplo). Podem ser mono ou polifônicos (uma ou mais notas simultaneamente).
 
-A seguir é mostrado um sintetizador com teclado:
+A seguir é mostrado um sintetizador com teclado, o clássico MiniMoog:
 
 ![Foto](https://upload.wikimedia.org/wikipedia/commons/3/3e/R.A.Moog_minimoog_2.jpg)
 
@@ -30,10 +30,6 @@ características em termos de qualidade e "pressão" no som. Existem os digitais
 
 Geralmente possuem um preço elevado, dependendo muito da sua arquitetura e fabricante. O modelo que se norteará este projeto
 é o [MiniMoog](https://en.wikipedia.org/wiki/Minimoog), que é um sintetizador monofônico extremamente popular desde os anos 70.
-
-o Minimoog:
-
-![Foto](https://upload.wikimedia.org/wikipedia/commons/2/22/Minimoog.JPG)
 
 [Este](https://produto.mercadolivre.com.br/MLB-1008756851-behringer-model-d-clone-mini-moog-entrega-a-partir-de-147-_JM) 
 é um simulador de MiniMoog da marca Behringer, o qual demonstra o tipo de produdo o qual se tentará desenvolver. 
