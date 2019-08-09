@@ -45,4 +45,12 @@ Serão utilizados neste projeto:
   - Instrumentação: gerador de sinal e osciloscópio para os testes.
   - Componentes eletrônicos: para a parte analógica.
   - Confecção PCI: para implementar o circuito.
+  
+  ### Referências
+  
+  https://hackaday.io/project/161618-cello-like-mostly-analog-synth/log/153824-vco-vca-vcf
+  
+  https://sound-au.com/articles/vca-techniques.html
+  
+  http://www.yusynth.net/Modular/EN/MOOGVCF/index.html
  
