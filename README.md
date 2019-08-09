@@ -32,7 +32,7 @@ Geralmente possuem um preço elevado, dependendo muito da sua arquitetura e fabr
 é o [MiniMoog](https://en.wikipedia.org/wiki/Minimoog), que é um sintetizador monofônico extremamente popular desde os anos 70.
 
 [Este](https://produto.mercadolivre.com.br/MLB-1008756851-behringer-model-d-clone-mini-moog-entrega-a-partir-de-147-_JM) 
-é um simulador de MiniMoog da marca Behringer, o qual demonstra o tipo de produdo o qual se tentará desenvolver. 
+é um simulador de MiniMoog da marca Behringer, o qual demonstra o tipo de produto o qual se tentará desenvolver. 
 
 
 ## O Projeto - Sintetizador Híbrido
