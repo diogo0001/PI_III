@@ -45,14 +45,15 @@ A seguir é mostrado um diagrama de blocos padrão de um sintetizador:
 
 ![Foto](https://upload.wikimedia.org/wikipedia/commons/8/86/Synthesizer.components.01.png)
 
-Para este projeto, sinal MIDI é recebido de um teclado controlador com as informações das notas, gera as ondas digitalmente, podendo mixar 2 formas de onda para gerar o timbre. Depois de passar por um DAC, passa pelos blocos analógicos de VCF(Voltage Controled Filter) e pelo VCA(Voltage Controled Amplifier). Para as modulações serão feitos os envelopes e o LFO.
+Para este projeto, sinal MIDI é recebido de um teclado controlador com as informações das notas, gera uma tensão respectiva por meio de pwm para emular uma tensão analógica que passará por um filtro passa baixa, para assim, alimentar o Vco do CI ICL8039, que gera as formas de onda. Após esta etapa, passa pelos blocos analógicos de VCF(Voltage Controled Filter) e pelo VCA(Voltage Controled Amplifier). Para as modulações serão feitos os envelopes e o LFO.
 
 ### Requisitos de projeto
 
 Serão utilizados neste projeto:
 
-  - [Arduino DUE](https://store.arduino.cc/usa/due): microcontrolador de 32 bits, com DAC de 12 bits, que já é uma resolução satisfatória para a aplicação. 
-  - [PlatformIO](https://platformio.org/): Ide para o desenvolvimento do código.
+  - Arduino UNO: microcontrolador de 8 bits para a aquisição do sinal MIDI, e gera tanto o Vco para os osciladores, 
+  quanto o LFO por PWM, que passará por filtragem. Será colocado na placa apenas o CI do Atmega328.
+  - CI [ICL8038]()
   - Instrumentação: gerador de sinal e osciloscópio para os testes.
   - Componentes eletrônicos: para a parte analógica.
   - Confecção PCI: para implementar o circuito.
@@ -74,3 +75,4 @@ Serão utilizados neste projeto:
   
   https://electricdruid.net/voltage-controlled-lfo-vclfo-9d/
  
+ https://www.arduino.cc/en/Tutorial/SecretsOfArduinoPWM
