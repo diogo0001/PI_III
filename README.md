@@ -3,6 +3,8 @@ Repositório para o projeto integrador III do curso de engenharia eletrônica do
 
 ## Sintetizador de áudio
 
+
+
 É um instrumento musical que gera seus sons eletronicamente. Pode-se controlar diversos parâmetros para modelar o timbre
 e caracterizar vários aspectos do som. Existem diversos tipos e modelos de sintetizadores, que podem ser modulares ou 
 possuir uma interface para ser tocado (teclado por exemplo). Podem ser mono ou polifônicos (uma ou mais notas simultaneamente).
@@ -30,7 +32,7 @@ características em termos de qualidade e "pressão" no som, segundo muitos. Exi
 
 Sintetizadores podem ter um preço elevado, dependendo muito da sua arquitetura e fabricante. O modelo que se norteará este projeto
 é o [MiniMoog](https://en.wikipedia.org/wiki/Minimoog), que é um sintetizador monofônico extremamente popular desde os anos 70.
-Foi encontrado um modelo usado por R$23.000,00, como pode ser visto [aqui](https://produto.mercadolivre.com.br/MLB-1237333066-minimoog-model-d-vintage-original-ano1974-sn438x-_JM?quantity=1&variation=37701313709)
+Foi encontrado um modelo usado por R$23.000,00, como pode ser visto [aqui](https://produto.mercadolivre.com.br/MLB-1237333066-minimoog-model-d-vintage-original-ano1974-sn438x-_JM?quantity=1&variation=37701313709).
 
 [Este](https://produto.mercadolivre.com.br/MLB-1008756851-behringer-model-d-clone-mini-moog-entrega-a-partir-de-147-_JM) 
 é um simulador de MiniMoog da marca Behringer, o qual demonstra o a proposta de produto o qual se deseja desenvolver. 
