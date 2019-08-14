@@ -1,6 +1,6 @@
 ## Simulação no proteus
 
- No proteus, abra o projeto e carregue o arquivo AnalogInOutSerial.ino.hex onde mostra na figura a seguir:
+ No proteus, abra o projeto e carregue o arquivo AnalogInOutSerial.ino.hex, e configure como mostra na figura a seguir:
   
   ![foto](https://github.com/diogo0001/PI_III/blob/master/Arduino/atmegaProteusConfig.PNG)
   
