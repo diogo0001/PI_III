@@ -1,5 +1,5 @@
 # PI III
-Repositório para o projeto integrador III do curso de engenharia eletrônica do IFSC Florianópolis.
+Repositório para o Projeto Integrador III do curso de Engenharia Eletrônica do IFSC Florianópolis.
 
 Alunos: Diogo Tavares e José Nicolau Varela
 
@@ -62,8 +62,8 @@ Este é um esboço 3D de como será o projeto:
 
 Serão utilizados neste projeto:
 
-  - uC [stm32f103C8T6](https://www.curtocircuito.com.br/placa-arm-stm32-stm32f103c8t6.html) (Blue Pill): microcontrolador de 32 bits que é até mais barato que um Arduino Uno e possui um PWM com resolução de 16 bits. É necessária uma boa resolução do PWM, bem como uma frequência alta, para precisão do VCO, e consequentemente das notas.
-  - CI ICL8038: gera senoide, quadrada e triangular, con ajuste de pwm, pode gerar dente de serra. Aqui está seu [datasheet](https://github.com/diogo0001/PI_III/blob/master/doc/icl8038.pdf).
+  - uC [stm32f103C8T6](https://www.curtocircuito.com.br/placa-arm-stm32-stm32f103c8t6.html) (Blue Pill): microcontrolador de 32 bits que é mais barato que um Arduino Uno e possui um PWM com resolução de 16 bits. É necessária uma boa resolução do PWM, bem como uma frequência alta, para precisão do VCO, e consequentemente das notas.
+  - CI ICL8038: gera onda senoide, quadrada e triangular, com ajuste de pwm, pode gerar dente de serra. Aqui está seu [datasheet](https://github.com/diogo0001/PI_III/blob/master/doc/icl8038.pdf).
   - Instrumentação: gerador de sinal e osciloscópio para os testes.
   - Componentes eletrônicos: para a parte analógica.
   - Confecção PCI: para implementar o circuito.
@@ -83,8 +83,8 @@ Serão utilizados neste projeto:
   
   #### Parâmetros do VCF
   
-  O fitro poderá ser selecionado como Passa Baixa ou Passa Alta, onde será controlada sua frequência de cutoff e a amplitude da 
-  frequência de resonância. O envelope fará a modulação da dinâmica do filtro. Os parâmetros controlados são:
+  O filtro poderá ser selecionado como Passa Baixa ou Passa Alta, onde será controlada sua frequência de cutoff e a amplitude da 
+  frequência de resonância (cutoff). O envelope fará a modulação da dinâmica do filtro. Os parâmetros controlados são:
   
    - Seletor do tipo de filtro. PA ou PB.
    - Controle da frequência de corte (cutoff).
@@ -93,8 +93,7 @@ Serão utilizados neste projeto:
    - Decay, que é o tempo que o filtro leva para deixar de agir.
    - Sustain, amplitude mínima que ficará ao final do decay.
    
-   O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e o circuito modula um sinal de tensão de controle
-   que controlará a dinâmica do filtro.
+O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e o circuito envelope modula um sinal de tensão de controle, que irá modular a dinâmica do filtro conforme sua envoltória.
   
   #### Parâmetros do VCA
   
@@ -106,8 +105,7 @@ Serão utilizados neste projeto:
    - Sustain, amplitude mínima que ficará ao final do decay.
    - Release, tempo que a nota continuará soando após ser encerrada o sinal MIDI, prolongamento.
    
-   O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e o circuito modula um sinal de tensão de controle
-   que controlará a dinâmica da amplitude. É uma envoltória para o sinal.
+   O envelope age da mesma forma que no VCF, onde fará aqui, a modulação do sinal na sua amplitude.
   
   #### Parâmetros do LFO
   
