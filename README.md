@@ -67,6 +67,7 @@ Serão utilizados neste projeto:
   - Instrumentação: gerador de sinal e osciloscópio para os testes.
   - Componentes eletrônicos: para a parte analógica.
   - Confecção PCI: para implementar o circuito.
+  - Gabinete para a montagem final.
   
   
   #### Parâmetros do VCO
