@@ -52,6 +52,10 @@ A seguir está o diagrama de blocos do projeto:
 
 ![foto](https://github.com/diogo0001/PI_III/blob/master/images/Synth%20Diagram.png)
 
+Este é um esboço 3D de como será o projeto:
+
+![foto](https://github.com/diogo0001/PI_III/blob/master/images/Synth%203d.png)
+
 ### Requisitos de projeto
 
 Serão utilizados neste projeto:
