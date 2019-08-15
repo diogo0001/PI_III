@@ -140,3 +140,5 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   https://electricdruid.net/voltage-controlled-lfo-vclfo-9d/
  
   https://www.arduino.cc/en/Tutorial/SecretsOfArduinoPWM
+  
+  https://www.filipeflop.com/blog/como-programar-stm32-em-c/
