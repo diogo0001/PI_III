@@ -56,9 +56,8 @@ A seguir está o diagrama de blocos do projeto:
 
 Serão utilizados neste projeto:
 
-  - Arduino UNO: microcontrolador de 8 bits para a aquisição do sinal MIDI, e gera tanto o Vco para os osciladores, 
-  quanto o LFO por PWM, que passará por filtragem. Será colocado na placa apenas o CI do Atmega328.
-  - CI [ICL8038]()
+  - uC [stm32f103C8T6](https://www.curtocircuito.com.br/placa-arm-stm32-stm32f103c8t6.html) (Blue Pill): microcontrolador de 32 bits que é até mais barato que um Arduino Uno e possui um PWM com resolução de 16 bits. É necessária uma boa resolução do PWM, bem como uma frequência alta, para precisão do VCO, e consequentemente das notas.
+  - CI ICL8038: gera senoide, quadrada e triangular, con ajuste de pwm, pode gerar dente de serra. Aqui está seu [datasheet](https://github.com/diogo0001/PI_III/blob/master/doc/icl8038.pdf).
   - Instrumentação: gerador de sinal e osciloscópio para os testes.
   - Componentes eletrônicos: para a parte analógica.
   - Confecção PCI: para implementar o circuito.
