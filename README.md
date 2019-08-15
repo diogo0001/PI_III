@@ -1,6 +1,8 @@
 # PI III
 Repositório para o projeto integrador III do curso de engenharia eletrônica do IFSC Florianópolis.
 
+Alunos: Diogo Tavares e José Nicolau Varela
+
 ## Sintetizador de áudio
 
 
