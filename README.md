@@ -39,7 +39,7 @@ Foi encontrado um modelo usado por R$23.000,00, como pode ser visto [aqui](https
 é um "simulador" de MiniMoog da marca Behringer, o qual demonstra o a proposta de produto o qual se deseja desenvolver. 
 
 
-## O Projeto - Sintetizador Híbrido
+## O Projeto - Sintetizador Analógico
 
 O intuito deste projeto é desenvolver um sintetizador com seus blocos básicos (Vco, Vcf, Vca, LFO e envelopes), 
 monofônico e sem efeitos, como é um minimoog.
