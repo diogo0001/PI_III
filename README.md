@@ -142,3 +142,5 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   https://www.arduino.cc/en/Tutorial/SecretsOfArduinoPWM
   
   https://www.filipeflop.com/blog/como-programar-stm32-em-c/
+  
+  https://www.schmitzbits.de/adsr.html
