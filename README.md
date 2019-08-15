@@ -69,6 +69,60 @@ Serão utilizados neste projeto:
   - Confecção PCI: para implementar o circuito.
   
   
+  #### Parâmetros do VCO
+  
+  Haverão 2 VCOs que serão mixados, de acordo com o que for desejado. Cada canal terá os seguintes controles:
+  
+   - Seletor do tipo de onda. Senóide, quadrada (com ajuste de pwm), triangular, dente de serra (obtida por ajuste de pwm).
+   São as saídas diretamente do CI.
+   - Controle do ganho, que será mo mixer (somador).
+   - Seletor de oitava. Seleciona se será exatamente a frequência da nota, metade, ou o dobro. Opção para aumetar as possibilidades 
+   para a mixagem das ondas. Este controle é enviado para pinos digitais do uC, que enviará a respectiva oitava. 
+   - Controle do pwm da onda. Controle feito no circuito do próprio CI.
+  
+  #### Parâmetros do VCF
+  
+  O fitro poderá ser selecionado como Passa Baixa ou Passa Alta, onde será controlada sua frequência de cutoff e a amplitude da 
+  frequência de resonância. O envelope fará a modulação da dinâmica do filtro. Os parâmetros controlados são:
+  
+   - Seletor do tipo de filtro. PA ou PB.
+   - Controle da frequência de corte (cutoff).
+   - Controle da frequência de resonância.
+   - Atack, que é o tempo que o filtro leva para atingir o máximo.
+   - Decay, que é o tempo que o filtro leva para deixar de agir.
+   - Sustain, amplitude mínima que ficará ao final do decay.
+   
+   O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e o circuito modula um sinal de tensão de controle
+   que controlará a dinâmica do filtro.
+  
+  #### Parâmetros do VCA
+  
+  O bloco do controle de amplitude tem os seguintes parâmetros a serem controlados:
+  
+   - Controle do ganho total.
+   - Atack, tempo para atingir a amplitude máxima.
+   - Decay, tempo para atingir a amplitude mímima.
+   - Sustain, amplitude mínima que ficará ao final do decay.
+   - Release, tempo que a nota continuará soando após ser encerrada o sinal MIDI, prolongamento.
+   
+   O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e o circuito modula um sinal de tensão de controle
+   que controlará a dinâmica da amplitude. É uma envoltória para o sinal.
+  
+  #### Parâmetros do LFO
+  
+  O LFO será gerado por PWM diretamente do uC, e passará por um filtro PB. Os seguintes parâmetros podem ser controlados:
+  
+   - Frequência da oscilação, que será um sinal analógico enviado ao uC para o ajuste da modulação do PWM. Será uma onda 
+   triangular, que é mais simples de ser gerada e o seu efeito é praticamente igual à uma senoide. O controle do amount 
+   no filtro PB também atenua as pontas da onda.
+   - Amount, que é a intensidade ou profundidade da atuação do LFO sobre seu target. Em outras palavras, a amplitude do LFO.
+   É controlado no filtro PB, e modifica um pouco a forma da onda, deixando a triangular com aspecto de senónide conforme
+   maior for sua atenuação.
+   - Target, é o bloco que se deseja aplicar. Pode ser o cutoff do VCF, o ganho do VCA, ou desligado.
+ 
+ ## Desenvolvimento
+  
+  
   ### Referências
   
   
