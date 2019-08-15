@@ -4,7 +4,6 @@ Repositório para o projeto integrador III do curso de engenharia eletrônica do
 ## Sintetizador de áudio
 
 
-
 É um instrumento musical que gera seus sons eletronicamente. Pode-se controlar diversos parâmetros para modelar o timbre
 e caracterizar vários aspectos do som. Existem diversos tipos e modelos de sintetizadores, que podem ser modulares ou 
 possuir uma interface para ser tocado (teclado por exemplo). Podem ser mono ou polifônicos (uma ou mais notas simultaneamente).
@@ -49,6 +48,10 @@ A seguir é mostrado um diagrama de blocos padrão de um sintetizador:
 
 Para este projeto, sinal MIDI é recebido de um teclado controlador com as informações das notas, gera uma tensão respectiva por meio de pwm para emular uma tensão analógica que passará por um filtro passa baixa, para assim, alimentar o Vco do CI ICL8039, que gera as formas de onda. Após esta etapa, passa pelos blocos analógicos de VCF(Voltage Controled Filter) e pelo VCA(Voltage Controled Amplifier). Para as modulações serão feitos os envelopes e o LFO.
 
+A seguir está o diagrama de blocos do projeto:
+
+![foto](https://github.com/diogo0001/PI_III/blob/master/images/Synth%20Diagram.png)
+
 ### Requisitos de projeto
 
 Serão utilizados neste projeto:
@@ -59,6 +62,7 @@ Serão utilizados neste projeto:
   - Instrumentação: gerador de sinal e osciloscópio para os testes.
   - Componentes eletrônicos: para a parte analógica.
   - Confecção PCI: para implementar o circuito.
+  
   
   ### Referências
   
@@ -77,4 +81,4 @@ Serão utilizados neste projeto:
   
   https://electricdruid.net/voltage-controlled-lfo-vclfo-9d/
  
- https://www.arduino.cc/en/Tutorial/SecretsOfArduinoPWM
+  https://www.arduino.cc/en/Tutorial/SecretsOfArduinoPWM
