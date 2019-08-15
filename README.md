@@ -35,8 +35,8 @@ Sintetizadores podem ter um preço elevado, dependendo muito da sua arquitetura 
 é o [MiniMoog](https://en.wikipedia.org/wiki/Minimoog), que é um sintetizador monofônico extremamente popular desde os anos 70.
 Foi encontrado um modelo usado por R$23.000,00, como pode ser visto [aqui](https://produto.mercadolivre.com.br/MLB-1237333066-minimoog-model-d-vintage-original-ano1974-sn438x-_JM?quantity=1&variation=37701313709).
 
-[Este](https://produto.mercadolivre.com.br/MLB-1008756851-behringer-model-d-clone-mini-moog-entrega-a-partir-de-147-_JM) 
-é um simulador de MiniMoog da marca Behringer, o qual demonstra o a proposta de produto o qual se deseja desenvolver. 
+[Este](https://produto.mercadolivre.com.br/MLB-1245546290-sintetizador-analogico-model-d-behringer-_JM?quantity=1#reco_item_pos=1&reco_backend=machinalis-v2p&reco_backend_type=low_level&reco_client=vip-v2p&reco_id=53b2ba6c-0ad8-430d-add6-b6dd5013def7) 
+é um "simulador" de MiniMoog da marca Behringer, o qual demonstra o a proposta de produto o qual se deseja desenvolver. 
 
 
 ## O Projeto - Sintetizador Híbrido
