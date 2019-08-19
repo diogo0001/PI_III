@@ -4,7 +4,22 @@
   
   ![foto](https://github.com/diogo0001/PI_III/blob/master/Arduino/atmegaProteusConfig.PNG)
   
- A simulação faz a leitura de um valor analógico e o reproduz por pwm, para verificar os problemas com a frequencia do pwm
- e o transitório do filtro RC. 
- A frequência baixa do pwm (400 Hz) para haver melhor resolução, implica na necessidade de um filtro que prejudica 
- transitórios rápidos de tensões na saída.
+ A simulação faz a leitura de um valor analógico de um potenciômetro e o reproduz por pwm. São utilizados 2 filtros de primeira ordem, com um aplificador de G=3 que atua entre eles, e que atua também como desacoplador.
+ 
+  ### Circuito de teste
+  
+  ![foto](https://github.com/diogo0001/PI_III/blob/master/Arduino/pwm_test_circuit.PNG)
+  
+  #### Resultados com filtro no pwm
+  
+  PWM e saída do filtro:
+  
+  ![foto](https://github.com/diogo0001/PI_III/blob/master/Arduino/cd_pwm.PNG)
+  
+  ![foto](https://github.com/diogo0001/PI_III/blob/master/Arduino/cd_pwm2.PNG)
+  
+  Variações com o potenciômetro lido pelo ADC do  arduino, o sinal mostrado é o da saída do filtro, que corresponde à variação do potenciômetro amplificada:
+  
+  ![foto](https://github.com/diogo0001/PI_III/blob/master/Arduino/variacao_pot.PNG)
+  
+  ![foto](https://github.com/diogo0001/PI_III/blob/master/Arduino/variacao_pot2.PNG)
