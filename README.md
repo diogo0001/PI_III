@@ -145,7 +145,7 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   
   https://www.schmitzbits.de/adsr.html
   
-  stm32 pwm
+   - stm32 pwm
   
   https://simonmartin.ch/resources/stm32/dl/STM32%20Tutorial%2002%20-%20PWM%20Generation%20using%20HAL%20(and%20FreeRTOS).pdf
   
@@ -155,3 +155,5 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   https://www.st.com/content/ccc/resource/technical/document/application_note/54/0f/67/eb/47/34/45/40/DM00042534.pdf/files/DM00042534.pdf/jcr:content/translations/en.DM00042534.pdf
   
   https://visualgdb.com/tutorials/arm/stm32/pwm/
+  
+  http://www.emcu.eu/stm32-basic-timer/
