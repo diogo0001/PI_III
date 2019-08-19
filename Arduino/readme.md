@@ -1,11 +1,12 @@
 ## Simulação no proteus
 
+Simulação para validar a utilização do pwm como VCO para o circuito oscilador. É feita a leitura de um valor analógico de um potenciômetro e o reproduz por PWM. São utilizados 2 filtros de primeira ordem, com um aplificador de G=3 que atua entre eles, e que atua também como desacoplador. O resultado é um sinal contínuo que pode ter sua amplitude controlada pelo PWM, logo, temos um VCO controlado por PWM.
+
  No proteus, abra o projeto e carregue o arquivo AnalogInOutSerial.ino.hex, configure como mostra na figura a seguir:
   
   ![foto](https://github.com/diogo0001/PI_III/blob/master/Arduino/atmegaProteusConfig.PNG)
   
- A simulação faz a leitura de um valor analógico de um potenciômetro e o reproduz por pwm. São utilizados 2 filtros de primeira ordem, com um aplificador de G=3 que atua entre eles, e que atua também como desacoplador.
- 
+  
   ### Circuito de teste
   
   ![foto](https://github.com/diogo0001/PI_III/blob/master/Arduino/pwm_test_circuit.PNG)
