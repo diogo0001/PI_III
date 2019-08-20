@@ -62,7 +62,7 @@ Este é um esboço 3D de como será o projeto:
 
 Serão utilizados neste projeto:
 
-  - uC [stm32f103C8T6](https://www.curtocircuito.com.br/placa-arm-stm32-stm32f103c8t6.html) (Blue Pill): microcontrolador de 32 bits que é mais barato que um Arduino Uno e possui um PWM com resolução de 16 bits. É necessária uma boa resolução do PWM, para precisão do VCO, e consequentemente das notas. Na pasta [Arduino](https://github.com/diogo0001/PI_III/tree/master/Arduino) está a simulação do tratamento do sinal PWM->VCO, que foi feita para testar a técnica utilizando o uC que havia disponivel para simulação.
+  - uC [stm32f103C8T6](https://www.curtocircuito.com.br/placa-arm-stm32-stm32f103c8t6.html) (Blue Pill): microcontrolador de 32 bits que é mais barato que um Arduino Uno e possui um PWM com resolução de 16 bits. É necessária uma boa resolução do PWM, para precisão do VCO, e consequentemente das notas. 
   - CI ICL8038: gera onda senoide, quadrada e triangular, com ajuste de pwm, pode gerar dente de serra. Aqui está seu [datasheet](https://github.com/diogo0001/PI_III/blob/master/doc/icl8038.pdf).
   - Instrumentação: gerador de sinal e osciloscópio para os testes.
   - Componentes eletrônicos: para a parte analógica.
@@ -120,6 +120,17 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
    - Target, é o bloco que se deseja aplicar. Pode ser o cutoff do VCF, o ganho do VCA, ou desligado.
  
  ## Desenvolvimento
+  
+  A primeira etapa, após o levantamento dos parâmetros desejados para o projeto, foi definir como seriam gerados os sinais. 
+  Iniciamlente pensou-se em criar as formas de onda em um uC, porém, além de exigir um dispositivo com capacidade para tal, 
+  a interface com o mundo analógico também deve ser considerada. Pensou-se em utilizar um Arduino DUE de 32 bits, que possui 2 saídas DAC de 12 bits, porém, não pareceu ter muita qualidade para o propósito, segundo relatos em fóruns. Além disso, o uC é muito grande, e não poderia ser incorporado à placa, sendo necessário o uso de jumpers. Logo, procuramos por outras alternativas.
+  
+  Outra opção seria utilizar o stm32f103C8T8 (Blue Pill), que também é de 32 bits, com preço bem acessível, mais barato até que um Arduino Uno de 8 bits. No entanto, ele não possui saída DAC. Cogitou-se utilizar um DAC externo que já possuíamos (no caso 2, pois faremos para 2 formas de onda), o problema é a quantidade de pinos necessários para isso.
+ 
+ Durante algumas pesquisas, foi encontrado o CI ICL8038, que é um gerador de formas de onda, muito utilizado para geradores de função
+  DIY (Do It Yourself). Este pareceu ser a solução perfeita, pois o que precisaríamos fazer seria gerar o VCO para controlá-lo. 
+  
+  Foi decidido utilizar então o CI ICL8038, e a técnica para o VCO consiste em gerá-lo por PWM. Conforme a nota é obtida pelo sinal MIDI, uma largura específica de PWM é gerada, isso deve ser feito nota a nota, para afiná-las. Logo, decidimos utilizar o uC stm32f103C8T8, pois ele possui PWM de 16 bits (65536 possibilidades de ajuste). o Problema é que PWM é um sinal pulsado, e o uC gera uma tensão de até 3,3 V na saída, sendo necessário também amplificá-la para alimentar o VCO do CI, que será até 12 V. A solução encontrada pode ser vista [aqui](https://github.com/diogo0001/PI_III/blob/master/Arduino/readme.md).
   
   
   ### Referências
