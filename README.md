@@ -63,7 +63,7 @@ Este é um esboço 3D de como será o projeto:
 Serão utilizados neste projeto:
 
   - uC [stm32f103C8T6](https://www.curtocircuito.com.br/placa-arm-stm32-stm32f103c8t6.html) (Blue Pill): microcontrolador de 32 bits que é mais barato que um Arduino Uno e possui um PWM com resolução de 16 bits. É necessária uma boa resolução do PWM, para precisão do VCO, e consequentemente das notas. 
-  - CI ICL8038: gera onda senoide, quadrada e triangular, com ajuste de pwm, pode gerar dente de serra. Aqui está seu [datasheet](https://github.com/diogo0001/PI_III/blob/master/doc/icl8038.pdf).
+  - CI ICL8038: gera onda senoide, quadrada e triangular, com ajuste de pwm, pode gerar dente de serra. Aqui está seu [datasheet](http://www.mit.edu/~6.331/icl8038data.pdf).
   - Instrumentação: gerador de sinal e osciloscópio para os testes.
   - Componentes eletrônicos: para a parte analógica.
   - Confecção PCI: para implementar o circuito.
