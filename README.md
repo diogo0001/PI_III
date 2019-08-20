@@ -156,6 +156,8 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   
   https://www.schmitzbits.de/adsr.html
   
+  http://www.circuitstoday.com/audio-oscillator-circuit-2
+  
    - stm32 pwm
   
   https://simonmartin.ch/resources/stm32/dl/STM32%20Tutorial%2002%20-%20PWM%20Generation%20using%20HAL%20(and%20FreeRTOS).pdf
