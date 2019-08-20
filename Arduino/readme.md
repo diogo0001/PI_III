@@ -1,6 +1,6 @@
 ## Simulação no proteus
 
-Simulação para validar a utilização do PWM como VCO para o circuito oscilador. É feita a leitura de um valor analógico de um potenciômetro e o reproduz por PWM. São utilizados 2 filtros de primeira ordem, com um aplificador de G=3 que atua entre eles, e que atua também como desacoplador. O resultado é um sinal contínuo que pode ter sua amplitude controlada pelo PWM, logo, temos um VCO controlado por PWM.
+Simulação para validar a utilização do PWM como VCO para o circuito oscilador. É feita a leitura de um valor analógico de um potenciômetro (pino 23) e o reproduz por PWM (pino 15). São utilizados 2 filtros de primeira ordem, com um aplificador de G=3 que atua entre eles, e que atua também como desacoplador. O resultado é um sinal contínuo que pode ter sua amplitude controlada pelo PWM, logo, temos um VCO controlado por PWM.
 
  A simulação foi feita utilizando o Atmega328, que é o uC que havia disponível no simulador, apenas para testar a técnica.
  
