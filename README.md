@@ -1,5 +1,5 @@
 # PI III
-Repositório para o Projeto Integrador III do curso de Engenharia Eletrônica do IFSC Florianópolis.
+Repositório para o Projeto Integrador III do curso de Engenharia Eletrônica - IFSC Florianópolis.
 
 Alunos: Diogo Tavares e José Nicolau Varela
 
