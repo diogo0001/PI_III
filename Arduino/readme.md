@@ -35,10 +35,12 @@ Filtro 1:
  - R: 2,3 kohms
  - C: 4,7 uF
  
+ 
  - Vm: 3,17 V
  - PWM: 66%
  - T subida:aprox 30 ms
  - Ripple: 260 mV
+
 
  - Vm: 870 mV
  - PWM: 16 %
