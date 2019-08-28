@@ -26,3 +26,21 @@ Simulação para validar a utilização do PWM como VCO para o circuito oscilado
   ![foto](https://github.com/diogo0001/PI_III/blob/master/Arduino/variacao_pot.PNG)
   
   ![foto](https://github.com/diogo0001/PI_III/blob/master/Arduino/variacao_pot2.PNG)
+
+
+## Resultados de bancada
+
+Filtro 1:
+
+ - R: 2,3 kohms
+ - C: 4,7 uF
+ 
+ - Vm: 3,17 V
+ - PWM: 66%
+ - T subida:aprox 30 ms
+ - Ripple: 260 mV
+
+ - Vm: 870 mV
+ - PWM: 16 %
+ - T subida: 19 ms
+ - Ripple: 200 mV
