@@ -172,4 +172,6 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   http://www.emcu.eu/stm32-basic-timer/
   
   calculo da frequencia das notas
+  
   https://pages.mtu.edu/~suits/NoteFreqCalcs.html
+  https://www.quora.com/Why-are-the-frequencies-of-musical-notes-in-geometric-progression
