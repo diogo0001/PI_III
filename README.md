@@ -170,3 +170,6 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   https://visualgdb.com/tutorials/arm/stm32/pwm/
   
   http://www.emcu.eu/stm32-basic-timer/
+  
+  calculo da frequencia das notas
+  https://pages.mtu.edu/~suits/NoteFreqCalcs.html
