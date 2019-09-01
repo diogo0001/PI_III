@@ -171,6 +171,8 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   
   http://www.emcu.eu/stm32-basic-timer/
   
+  [Video](https://www.youtube.com/watch?v=EaZuKRSvwdo) stm32 Arduino IDE
+  
   calculo da frequencia das notas
   
   https://pages.mtu.edu/~suits/NoteFreqCalcs.html
