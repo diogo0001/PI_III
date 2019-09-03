@@ -1,7 +1,9 @@
 # PI III
 Repositório para o Projeto Integrador III do curso de Engenharia Eletrônica - IFSC Florianópolis.
 
-Alunos: Diogo Tavares e José Nicolau Varela
+Alunos: Diogo Tavares e José Nicolau Varela.
+
+O cronograma previsto para as atividades pode ser visto [aqui](https://github.com/diogo0001/PI_III/blob/master/cronograma.md).
 
 ## Sintetizador de áudio
 
