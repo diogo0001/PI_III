@@ -65,7 +65,8 @@ Este é um esboço 3D de como será o projeto:
 Serão utilizados neste projeto:
 
   - uC [stm32f103C8T6](https://www.curtocircuito.com.br/placa-arm-stm32-stm32f103c8t6.html) (Blue Pill): microcontrolador de 32 bits que é mais barato que um Arduino Uno e possui um PWM com resolução de 16 bits. É necessária uma boa resolução do PWM, para precisão do VCO, e consequentemente das notas. 
-  - CI ICL8038: gera onda senoide, quadrada e triangular, com ajuste de pwm, pode gerar dente de serra. Aqui está seu [datasheet](http://www.mit.edu/~6.331/icl8038data.pdf).
+  - CI ICL8038: gera onda senoide, quadrada e triangular, com ajuste de pwm, pode gerar dente de serra. Aqui está seu [datasheet](http://www.mit.edu/~6.331/icl8038data.pdf). (Este acabou sendo descartado do projeto)
+  - CI AD9833: gera formas de onda com comunicação e controle digital. Aqui está seu [datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/AD9833.pdf).
   - Instrumentação: gerador de sinal e osciloscópio para os testes.
   - Componentes eletrônicos: para a parte analógica.
   - Confecção PCI: para implementar o circuito.
@@ -132,7 +133,9 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
  Durante algumas pesquisas, foi encontrado o CI ICL8038, que é um gerador de formas de onda, muito utilizado para geradores de função
   DIY (Do It Yourself). Este pareceu ser a solução perfeita, pois o que precisaríamos fazer seria gerar o VCO para controlá-lo. 
   
-  Foi decidido utilizar então o CI ICL8038, e a técnica para o VCO consiste em gerá-lo por PWM. Conforme a nota é obtida pelo sinal MIDI, uma largura específica de PWM é gerada, isso deve ser feito nota a nota, para afiná-las. Logo, decidimos utilizar o uC stm32f103C8T8, pois ele possui PWM de 16 bits (65536 possibilidades de ajuste). o Problema é que PWM é um sinal pulsado, e o uC gera uma tensão de até 3,3 V na saída, sendo necessário também amplificá-la para alimentar o VCO do CI, que será até 12 V. A solução encontrada pode ser vista [aqui](https://github.com/diogo0001/PI_III/blob/master/Arduino/readme.md).
+  Foi decidido utilizar então o CI ICL8038, e a técnica para o VCO consiste em gerá-lo por PWM. Conforme a nota é obtida pelo sinal MIDI, uma largura específica de PWM é gerada, isso deve ser feito nota a nota, para afiná-las. Logo, decidimos utilizar o uC stm32f103C8T8, pois ele possui PWM de 16 bits (65536 possibilidades de ajuste). o Problema é que PWM é um sinal pulsado, e o uC gera uma tensão de até 3,3 V na saída, sendo necessário também amplificá-la para alimentar o VCO do CI, que será até 12 V. Uma possível solução encontrada pode ser vista [aqui](https://github.com/diogo0001/PI_III/blob/master/Arduino/readme.md), e os testes práticos mostrando alguns resultados práticos.
+  Apesar de ser possível, a solução anterior apresentou inconvenientes e limitações, como foi apresentado. Decidiu-se utilizar então o CI AD9833, gerador de funções digital, com comunicação via SPI. O uso do stm32 foi mantido devido ao fato de ele possiur duas portas SPI, pois deseja-se utilizar 2 geradores independentes. O teste com a comunicação e a geração das formas de onda pode ser visto (aqui)[].
+  Para a obtenção do (protocolo MIDI)[] vindo do controlador, é utilizada a porta serial do stm32, que recebe os protocolos cada vez que a nota é tocada. Os testes de aquisição destes valores pela serial podem ser vistos (aqui)[]. Foi então feita a lógica para obter a nota, e o tempo que esta permanece ligada.
   
   
   ### Referências
@@ -179,3 +182,6 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   
   https://pages.mtu.edu/~suits/NoteFreqCalcs.html
   https://www.quora.com/Why-are-the-frequencies-of-musical-notes-in-geometric-progression
+  
+  Exemplo para ad9832
+  https://gist.github.com/2e1hnk/d102c36f259060f51d95aa5dbc4c2372
