@@ -6,26 +6,26 @@ Simulação para validar a utilização do PWM como VCO para o circuito oscilado
  
  No proteus, abra o projeto e carregue o arquivo AnalogInOutSerial.ino.hex no Atmega328, configure como mostra a figura a seguir:
   
-  ![foto](https://github.com/diogo0001/PI_III/blob/master/Arduino/atmegaProteusConfig.PNG)
+  ![foto](https://github.com/diogo0001/PI_III/blob/master/ICL8039_PWM_test/atmegaProteusConfig.PNG)
   
   
   ### Circuito de teste
   
-  ![foto](https://github.com/diogo0001/PI_III/blob/master/Arduino/pwm_test_circuit.PNG)
+  ![foto](https://github.com/diogo0001/PI_III/blob/master/ICL8039_PWM_test/pwm_test_circuit.PNG)
   
   #### Resultados com filtro no pwm
   
   PWM e saída do filtro:
   
-  ![foto](https://github.com/diogo0001/PI_III/blob/master/Arduino/cd_pwm.PNG)
+  ![foto](https://github.com/diogo0001/PI_III/blob/master/ICL8039_PWM_test/cd_pwm.PNG)
   
-  ![foto](https://github.com/diogo0001/PI_III/blob/master/Arduino/cd_pwm2.PNG)
+  ![foto](https://github.com/diogo0001/PI_III/blob/master/ICL8039_PWM_test/cd_pwm2.PNG)
   
   Variações com o potenciômetro lido pelo ADC do  arduino, o sinal mostrado é o da saída do filtro, que corresponde à variação do potenciômetro amplificada:
   
-  ![foto](https://github.com/diogo0001/PI_III/blob/master/Arduino/variacao_pot.PNG)
+  ![foto](https://github.com/diogo0001/PI_III/blob/master/ICL8039_PWM_test/variacao_pot.PNG)
   
-  ![foto](https://github.com/diogo0001/PI_III/blob/master/Arduino/variacao_pot2.PNG)
+  ![foto](https://github.com/diogo0001/PI_III/blob/master/ICL8039_PWM_test/variacao_pot2.PNG)
 
 
 ## Resultados de bancada
