@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
- <FRAME activewindow="2">
+ <FRAME activewindow="0">
   <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffffcb0100001200000056050000d8020000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
   <WINDOW type="default" module="ARES"/>
@@ -34,7 +34,7 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="695" x="572" flags="00008001" y="20" h="453" pid="0" iid="24">
+   <POPUP w="695" x="187" flags="00008001" y="132" h="453" pid="0" iid="24">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="511" x="595" flags="00000000" y="226" h="147" pid="0" iid="36">
