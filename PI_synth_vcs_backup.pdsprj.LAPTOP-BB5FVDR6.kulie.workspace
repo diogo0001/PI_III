@@ -1,10 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="0">
-  <PLACEMENT>2c00000002000000030000000083ffff0083ffffffffffffffffffffcb010000a400000056050000d8020000</PLACEMENT>
+  <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffffcb010000a400000056050000d8020000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
   <WINDOW type="default" module="ARES"/>
-  <WINDOW type="default" module="VSMDEBUG"/>
  </FRAME>
  <MODULE name="VSMDEBUG">
   <PWI>
@@ -34,10 +33,10 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="695" x="643" flags="00008001" y="180" h="453" pid="0" iid="24">
+   <POPUP w="695" x="78" flags="00000001" y="214" h="453" pid="0" iid="24">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="511" x="839" flags="00000001" y="6" h="147" pid="0" iid="16">
+   <POPUP w="511" x="989" flags="00008001" y="229" h="147" pid="0" iid="16">
     <PROPERTIES/>
    </POPUP>
   </PWI>
