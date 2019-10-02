@@ -150,6 +150,10 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   Após todas as partes do sistema serem implementadas e testadas, iniciou-se a integração de todo o sistema, as etapas adotadas
   e os resultados podem ser vistos [aqui](https://github.com/diogo0001/PI_III/tree/master/System_Integration_test).
   
+  Para a montagem final do sistema, foram criadas placas de circuito impresso (PCIs) em módulos, de modo que ficasse mais prático
+  o desenvolvimento e correção de erros, os layouts das placas e as mesmas montadas podem ser vistas [aqui]().
+  Os resultados finais, com o sistema todo montado, integrado e e em funcionamento, bem como os vídeos pode, ser vistos [aqui](https://github.com/diogo0001/PI_III/tree/master/Final_results). 
+  
   ### Conclusão
   
   ### Referências
