@@ -137,7 +137,7 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   
   Apesar de ser possível, a solução anterior apresentou inconvenientes e limitações, como foi apresentado. Decidiu-se utilizar então o CI AD9833, gerador de funções digital, com comunicação via SPI. O uso do stm32 foi mantido devido ao fato de ele possiur duas portas SPI, pois deseja-se utilizar 2 geradores independentes. O teste com a comunicação e a geração das formas de onda pode ser visto (aqui)[].
   
-  Para a obtenção do (protocolo MIDI)[] vindo do controlador, é utilizada a porta serial do stm32, que recebe os protocolos cada vez que a nota é tocada. Os testes de aquisição destes valores pela serial podem ser vistos (aqui)[]. Foi então feita a lógica para obter a nota, e o tempo que esta permanece ligada.
+  Para a obtenção do [protocolo MIDI]() vindo do controlador, é utilizada a porta serial do stm32, que recebe os protocolos cada vez que a nota é tocada. Os testes de aquisição destes valores pela serial podem ser vistos [aqui](). Foi então feita a lógica para obter a nota, e o tempo que esta permanece ligada.
   
   Paralelamente ao desenvolvimento do sistema para o MIDI, foi feita a pesquisa e testes para os circuitos de envelope, VCA e VCF.
   Os resultados dos testes isolados para o VCA com envelope podem ser vistos [aqui](https://github.com/diogo0001/PI_III/blob/master/VCA_test/readme.md), e para o VCF com envelope pode ser visto [aqui](https://github.com/diogo0001/PI_III/tree/master/VCF_test).
