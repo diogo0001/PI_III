@@ -1,1 +1,1 @@
-# Testes para o circuito VCF
+# Testes para a aquisição dos protocolos MIDI via rx
