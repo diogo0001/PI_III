@@ -135,7 +135,7 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   
   Foi decidido utilizar então o CI ICL8038, e a técnica para o VCO consiste em gerá-lo por PWM. Conforme a nota é obtida pelo sinal MIDI, uma largura específica de PWM é gerada, isso deve ser feito nota a nota, para afiná-las. Logo, decidimos utilizar o uC stm32f103C8T8, pois ele possui PWM de 16 bits (65536 possibilidades de ajuste). o Problema é que PWM é um sinal pulsado, e o uC gera uma tensão de até 3,3 V na saída, sendo necessário também amplificá-la para alimentar o VCO do CI, que será até 12 V. Uma possível solução encontrada pode ser vista [aqui](https://github.com/diogo0001/PI_III/blob/master/ICL8039_PWM_test/readme.md), e os testes práticos mostrando alguns resultados práticos.
   
-  Apesar de ser possível, a solução anterior apresentou inconvenientes e limitações, como foi apresentado. Decidiu-se utilizar então o CI AD9833, gerador de funções digital, com comunicação via SPI. O uso do stm32 foi mantido devido ao fato de ele possiur duas portas SPI, pois deseja-se utilizar 2 geradores independentes. O teste com a comunicação e a geração das formas de onda pode ser visto [aqui]().
+  Apesar de ser possível, a solução anterior apresentou inconvenientes e limitações, como foi apresentado. Decidiu-se utilizar então o CI AD9833, gerador de funções digital, com comunicação via SPI. O uso do stm32 foi mantido devido ao fato de ele possiur duas portas SPI, pois deseja-se utilizar 2 geradores independentes. O teste com a comunicação e a geração das formas de onda pode ser visto [aqui](https://github.com/diogo0001/PI_III/blob/master/AD9833_test/readme.md).
   
   Para a obtenção do [protocolo MIDI](https://ccrma.stanford.edu/~craig/articles/linuxmidi/misc/essenmidi.html) vindo do controlador, é utilizada a porta serial do stm32, que recebe os protocolos cada vez que a nota é tocada. Os testes de aquisição destes valores pela serial podem ser vistos [aqui](https://github.com/diogo0001/PI_III/tree/master/MIDI_test). Foi então feita a lógica para obter a nota, e o tempo que esta permanece ligada. 
   
@@ -151,7 +151,7 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   e os resultados podem ser vistos [aqui](https://github.com/diogo0001/PI_III/tree/master/System_Integration_test).
   
   Para a montagem final do sistema, foram criadas placas de circuito impresso (PCIs) em módulos, de modo que ficasse mais prático
-  o desenvolvimento e correção de erros, os layouts das placas e as mesmas montadas podem ser vistas [aqui]().
+  o desenvolvimento e correção de erros, os layouts das placas e as mesmas montadas podem ser vistas [aqui](https://github.com/diogo0001/PI_III/blob/master/Board_layout/readme.md).
   Os resultados finais, com o sistema todo montado, integrado e e em funcionamento, bem como os vídeos pode, ser vistos [aqui](https://github.com/diogo0001/PI_III/tree/master/Final_results). 
   
   ### Conclusão
