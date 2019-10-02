@@ -20,6 +20,12 @@ Os parâmetros do envelope são:
 
 Resultado da simulação:
 
+Em amarelo: sinal do envelope.
+
+Em azul: sinal de áudio modulado.
+
+Em rosa: sinal de áudio original.
+
 ![](https://github.com/diogo0001/PI_III/blob/master/VCA_test/vca_envelope.PNG)
 
 
