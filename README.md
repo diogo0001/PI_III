@@ -135,13 +135,22 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   
   Foi decidido utilizar então o CI ICL8038, e a técnica para o VCO consiste em gerá-lo por PWM. Conforme a nota é obtida pelo sinal MIDI, uma largura específica de PWM é gerada, isso deve ser feito nota a nota, para afiná-las. Logo, decidimos utilizar o uC stm32f103C8T8, pois ele possui PWM de 16 bits (65536 possibilidades de ajuste). o Problema é que PWM é um sinal pulsado, e o uC gera uma tensão de até 3,3 V na saída, sendo necessário também amplificá-la para alimentar o VCO do CI, que será até 12 V. Uma possível solução encontrada pode ser vista [aqui](https://github.com/diogo0001/PI_III/blob/master/ICL8039_PWM_test/readme.md), e os testes práticos mostrando alguns resultados práticos.
   
-  Apesar de ser possível, a solução anterior apresentou inconvenientes e limitações, como foi apresentado. Decidiu-se utilizar então o CI AD9833, gerador de funções digital, com comunicação via SPI. O uso do stm32 foi mantido devido ao fato de ele possiur duas portas SPI, pois deseja-se utilizar 2 geradores independentes. O teste com a comunicação e a geração das formas de onda pode ser visto (aqui)[].
+  Apesar de ser possível, a solução anterior apresentou inconvenientes e limitações, como foi apresentado. Decidiu-se utilizar então o CI AD9833, gerador de funções digital, com comunicação via SPI. O uso do stm32 foi mantido devido ao fato de ele possiur duas portas SPI, pois deseja-se utilizar 2 geradores independentes. O teste com a comunicação e a geração das formas de onda pode ser visto [aqui]().
   
-  Para a obtenção do [protocolo MIDI]() vindo do controlador, é utilizada a porta serial do stm32, que recebe os protocolos cada vez que a nota é tocada. Os testes de aquisição destes valores pela serial podem ser vistos [aqui](). Foi então feita a lógica para obter a nota, e o tempo que esta permanece ligada.
+  Para a obtenção do [protocolo MIDI](https://ccrma.stanford.edu/~craig/articles/linuxmidi/misc/essenmidi.html) vindo do controlador, é utilizada a porta serial do stm32, que recebe os protocolos cada vez que a nota é tocada. Os testes de aquisição destes valores pela serial podem ser vistos [aqui](https://github.com/diogo0001/PI_III/tree/master/MIDI_test). Foi então feita a lógica para obter a nota, e o tempo que esta permanece ligada. 
   
   Paralelamente ao desenvolvimento do sistema para o MIDI, foi feita a pesquisa e testes para os circuitos de envelope, VCA e VCF.
   Os resultados dos testes isolados para o VCA com envelope podem ser vistos [aqui](https://github.com/diogo0001/PI_III/blob/master/VCA_test/readme.md), e para o VCF com envelope pode ser visto [aqui](https://github.com/diogo0001/PI_III/tree/master/VCF_test).
   
+  Foi feita a implementação do LFO por software, onde a variação da amplitude será gerada por PWM, e a frequência será a taxa que o
+  duty cycle varia. A regulagem para a frequência do LFO é feita por um potenciômetro lido pelo ADC do STM32. Um filtro passa baixa
+  é utilizado na saída no uC, e um potenciômetro na parte R do filtro RC será responsável intensidade da amplitude do LFO. Os resultados
+  dos testes do LFO podem ser vistos [aqui](https://github.com/diogo0001/PI_III/blob/master/LFO_test/readme.md).
+  
+  Após todas as partes do sistema serem implementadas e testadas, iniciou-se a integração de todo o sistema, as etapas adotadas
+  e os resultados podem ser vistos [aqui](https://github.com/diogo0001/PI_III/tree/master/System_Integration_test).
+  
+  ### Conclusão
   
   ### Referências
   
