@@ -125,20 +125,21 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
  
  ## Desenvolvimento
   
-  A primeira etapa, após o levantamento dos parâmetros desejados para o projeto, foi definir como seriam gerados os sinais. 
+  A metodologia adotada foi a implementação e testes de cada bloco do sistema de forma independente, uma vez que os requisitos foram estabelecidos, a implementação de cada bloco pode ser feita em paralelo com outro bloco.
+  
+  A primeira etapa, durante o levantamento dos parâmetros desejados para o projeto, foi definir como seriam gerados os sinais. 
   Iniciamlente pensou-se em criar as formas de onda em um uC, porém, além de exigir um dispositivo com capacidade para tal, 
   a interface com o mundo analógico também deve ser considerada. Pensou-se em utilizar um Arduino DUE de 32 bits, que possui 2 saídas DAC de 12 bits, porém, não pareceu ter muita qualidade para o propósito, segundo relatos em fóruns. Além disso, o uC é muito grande, e não poderia ser incorporado à placa, sendo necessário o uso de jumpers. Logo, procuramos por outras alternativas.
   
   Outra opção seria utilizar o stm32f103C8T8 (Blue Pill), que também é de 32 bits, com preço bem acessível, mais barato até que um Arduino Uno de 8 bits. No entanto, ele não possui saída DAC. Cogitou-se utilizar um DAC externo que já possuíamos (no caso 2, pois faremos para 2 formas de onda), o problema é a quantidade de pinos necessários para isso.
  
  Durante algumas pesquisas, foi encontrado o CI ICL8038, que é um gerador de formas de onda, muito utilizado para geradores de função
-  DIY (Do It Yourself). Este pareceu ser a solução perfeita, pois o que precisaríamos fazer seria gerar o VCO para controlá-lo. 
+  DIY (Do It Yourself). Este pareceu ser uma boa solução , pois o que precisaríamos fazer seria gerar o VCO para controlá-lo. 
   
-  Foi decidido utilizar então o CI ICL8038, e a técnica para o VCO consiste em gerá-lo por PWM. Conforme a nota é obtida pelo sinal MIDI, uma largura específica de PWM é gerada, isso deve ser feito nota a nota, para afiná-las. Logo, decidimos utilizar o uC stm32f103C8T8, pois ele possui PWM de 16 bits (65536 possibilidades de ajuste). o Problema é que PWM é um sinal pulsado, e o uC gera uma tensão de até 3,3 V na saída, sendo necessário também amplificá-la para alimentar o VCO do CI, que será até 12 V. Uma possível solução encontrada pode ser vista [aqui](https://github.com/diogo0001/PI_III/blob/master/ICL8039_PWM_test/readme.md), e os testes práticos mostrando alguns resultados práticos.
+  Foi decidido utilizar, inicialmente, o CI ICL8038, e a técnica para o VCO consiste em gerá-lo por PWM. Conforme a nota é obtida pelo sinal MIDI, uma largura específica de PWM é gerada, isso deve ser feito nota a nota, para afiná-las. Logo, decidimos utilizar o uC stm32f103C8T8, pois ele possui PWM de 16 bits (65536 possibilidades de ajuste). o Problema é que PWM é um sinal pulsado, e o uC gera uma tensão de até 3,3 V na saída, sendo necessário também amplificá-la para alimentar o VCO do CI, que será até 12 V. Uma possível solução encontrada e os respectivos testes podem ser vistos [aqui](https://github.com/diogo0001/PI_III/blob/master/ICL8039_PWM_test/readme.md).  Apesar de ser possível, esta solução apresentou inconvenientes e limitações, como foi apresentado. Decidiu-se utilizar então o CI AD9833, gerador de funções digital, com comunicação via SPI. O uso do stm32 foi mantido devido ao fato de ele possiur duas portas SPI, pois deseja-se utilizar 2 geradores independentes. Os testes de comunicação e a geração das formas de onda pode ser visto [aqui](https://github.com/diogo0001/PI_III/blob/master/AD9833_test/readme.md).
   
-  Apesar de ser possível, a solução anterior apresentou inconvenientes e limitações, como foi apresentado. Decidiu-se utilizar então o CI AD9833, gerador de funções digital, com comunicação via SPI. O uso do stm32 foi mantido devido ao fato de ele possiur duas portas SPI, pois deseja-se utilizar 2 geradores independentes. O teste com a comunicação e a geração das formas de onda pode ser visto [aqui](https://github.com/diogo0001/PI_III/blob/master/AD9833_test/readme.md).
-  
-  Para a obtenção do [protocolo MIDI](https://ccrma.stanford.edu/~craig/articles/linuxmidi/misc/essenmidi.html) vindo do controlador, é utilizada a porta serial do stm32, que recebe os protocolos cada vez que a nota é tocada. Os testes de aquisição destes valores pela serial podem ser vistos [aqui](https://github.com/diogo0001/PI_III/tree/master/MIDI_test). Foi então feita a lógica para obter a nota, e o tempo que esta permanece ligada. 
+  Para a obtenção do [protocolo MIDI](https://ccrma.stanford.edu/~craig/articles/linuxmidi/misc/essenmidi.html) vindo do controlador, foi utilizada a porta serial do stm32, que recebe os protocolos cada vez que uma nota é tocada. Os testes de aquisição destes valores pela serial podem ser vistos [aqui](https://github.com/diogo0001/PI_III/tree/master/MIDI_test). Foi então feita a lógica para obter a nota, e o tempo que esta permanece ligada. Foi criado um vetor com os parâmetros a serem enviados para o AD9833, onde o índice do vetor
+é o parâmetro retirado diretamente do protocolo MIDI. 
   
   Paralelamente ao desenvolvimento do sistema para o MIDI, foi feita a pesquisa e testes para os circuitos de envelope, VCA e VCF.
   Os resultados dos testes isolados para o VCA com envelope podem ser vistos [aqui](https://github.com/diogo0001/PI_III/blob/master/VCA_test/readme.md), e para o VCF com envelope pode ser visto [aqui](https://github.com/diogo0001/PI_III/tree/master/VCF_test).
@@ -153,7 +154,7 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   
   Para a montagem final do sistema, foram criadas placas de circuito impresso (PCIs) em módulos, de modo que ficasse mais prático
   o desenvolvimento e correção de erros, os layouts das placas e as mesmas montadas podem ser vistas [aqui](https://github.com/diogo0001/PI_III/blob/master/Board_layout/readme.md).
-  Os resultados finais, com o sistema todo montado, integrado e e em funcionamento, bem como os vídeos pode, ser vistos [aqui](https://github.com/diogo0001/PI_III/tree/master/Final_results). 
+  Os resultados finais, com o sistema todo montado, integrado e e em funcionamento, bem como os vídeos, podem ser vistos [aqui](https://github.com/diogo0001/PI_III/tree/master/Final_results). 
   
   ### Conclusão
   
