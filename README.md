@@ -53,7 +53,7 @@ A seguir é mostrado um diagrama de blocos padrão de um sintetizador:
 
 ![Foto](https://upload.wikimedia.org/wikipedia/commons/8/86/Synthesizer.components.01.png)
 
-Para este projeto, sinal MIDI é recebido de um teclado controlador com as informações das notas, gera uma tensão respectiva por meio de pwm para emular uma tensão analógica que passará por um filtro passa baixa, para assim, alimentar o Vco do CI ICL8039, que gera as formas de onda. Após esta etapa, passa pelos blocos analógicos de VCF(Voltage Controled Filter) e pelo VCA(Voltage Controled Amplifier). Para as modulações serão feitos os envelopes e o LFO.
+Na implementação que será desenvolvida, o sinal MIDI é recebido de um teclado controlador com as informações das notas, e aí será gerada a forma de onda desejada com a respectiva frequência (será estudada a melhor forma para a geração das ondas). Após esta etapa, o sinal passa pelos blocos analógicos de VCF(Voltage Controled Filter) e pelo VCA(Voltage Controled Amplifier). Para as modulações serão feitos os envelopes e o LFO.
 
 A seguir está o diagrama de blocos do projeto:
 
@@ -68,8 +68,8 @@ Este é um esboço 3D de como será o projeto:
 Serão utilizados neste projeto:
 
   - uC [stm32f103C8T6](https://www.curtocircuito.com.br/placa-arm-stm32-stm32f103c8t6.html) (Blue Pill): microcontrolador de 32 bits que é mais barato que um Arduino Uno e possui um PWM com resolução de 16 bits. É necessária uma boa resolução do PWM, para precisão do VCO, e consequentemente das notas. 
-  - CI ICL8038: gera onda senoide, quadrada e triangular, com ajuste de pwm, pode gerar dente de serra. Aqui está seu [datasheet](http://www.mit.edu/~6.331/icl8038data.pdf). (Este acabou sendo descartado do projeto)
-  - CI AD9833: gera formas de onda com comunicação e controle digital. Aqui está seu [datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/AD9833.pdf).
+  - CI ICL8038: gera onda senoide, quadrada e triangular, com ajuste de pwm, pode gerar dente de serra. Aqui está seu [datasheet](http://www.mit.edu/~6.331/icl8038data.pdf). (Foram feitos testes , e este acabou sendo descartado do projeto)
+  - CI AD9833: gera formas de onda com comunicação SPI, e controle digital. Aqui está seu [datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/AD9833.pdf).
   - Instrumentação: gerador de sinal e osciloscópio para os testes.
   - Componentes eletrônicos: para a parte analógica.
   - Confecção PCI: para implementar o circuito.
@@ -80,12 +80,10 @@ Serão utilizados neste projeto:
   
   Haverão 2 VCOs que serão mixados, de acordo com o que for desejado. Cada canal terá os seguintes controles:
   
-   - Seletor do tipo de onda. Senóide, quadrada (com ajuste de pwm), triangular, dente de serra (obtida por ajuste de pwm).
-   São as saídas diretamente do CI.
-   - Controle do ganho, que será mo mixer (somador).
+   - Seletor do tipo de onda. Senóide, quadrada e triangular. 
+   - Controle do ganho.
    - Seletor de oitava. Seleciona se será exatamente a frequência da nota, metade, ou o dobro. Opção para aumetar as possibilidades 
    para a mixagem das ondas. Este controle é enviado para pinos digitais do uC, que enviará a respectiva oitava. 
-   - Controle do pwm da onda. Controle feito no circuito do próprio CI.
   
   #### Parâmetros do VCF
   
