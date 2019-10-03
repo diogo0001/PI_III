@@ -175,6 +175,8 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   https://www.soundonsound.com/techniques/modulation
   
   https://electricdruid.net/voltage-controlled-lfo-vclfo-9d/
+  
+  http://electro-music.com/forum/phpbb-files/simplevcf_252_119.gif
  
   https://www.arduino.cc/en/Tutorial/SecretsOfArduinoPWM
   
@@ -199,10 +201,11 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   
   [Video](https://www.youtube.com/watch?v=EaZuKRSvwdo) stm32 Arduino IDE
   
-  calculo da frequencia das notas
+  Cálculo da frequência das notas:
   
   https://pages.mtu.edu/~suits/NoteFreqCalcs.html
   https://www.quora.com/Why-are-the-frequencies-of-musical-notes-in-geometric-progression
   
-  Exemplo para ad9832
+  Exemplo para ad9832:
+  
   https://gist.github.com/2e1hnk/d102c36f259060f51d95aa5dbc4c2372
