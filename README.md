@@ -33,7 +33,7 @@ Atualmente, estes instrumentos existem tanto puramente analógicos, como eram an
 características em termos de qualidade e "pressão" no som, segundo muitos. Existem os digitais, híbridos (analógico-digital), e VST
  (Virtual Studio Tecnology), que são instrumentos virtuais utilizados no computador.
 
-Sintetizadores podem ter um preço elevado, dependendo muito da sua arquitetura e fabricante. O modelo que se norteará este projeto
+Sintetizadores podem ter um preço elevado, dependendo muito da sua arquitetura e fabricante. O modelo que norteará este projeto
 é o [MiniMoog](https://en.wikipedia.org/wiki/Minimoog), que é um sintetizador monofônico extremamente popular desde os anos 70.
 Foi encontrado um modelo usado por R$23.000,00, como pode ser visto [aqui](https://produto.mercadolivre.com.br/MLB-1237333066-minimoog-model-d-vintage-original-ano1974-sn438x-_JM?quantity=1&variation=37701313709).
 
@@ -41,10 +41,13 @@ Foi encontrado um modelo usado por R$23.000,00, como pode ser visto [aqui](https
 é um "simulador" de MiniMoog da marca Behringer, o qual demonstra o a proposta de produto o qual se deseja desenvolver. 
 
 
-## O Projeto - Sintetizador Analógico
+## O Projeto - Sintetizador Híbrido
 
-O intuito deste projeto é desenvolver um sintetizador com seus blocos básicos (Vco, Vcf, Vca, LFO e envelopes), 
-monofônico e sem efeitos, como é um minimoog.
+Como mostrado anteriormente, este mercado pode ter um bom potencial a ser explorado. E para nós, apreciadores do áudio, é uma grande oportunidade para aplicar os conhecimentos adquiridos até então.
+Busca-se com este projeto, compreender as etapas e desafios no desenvolvimento destes instrumentos, para que, futuramente,
+seja possível ter uma bagagem para o aperfeiçoamento e produção destes para o mercado.
+
+Este projeto consiste em desenvolver um sintetizador híbrido(digital/analógico) com seus blocos básicos (Vco, Vcf, Vca, LFO e envelopes), monofônico e sem efeitos, como é um minimoog.
 
 A seguir é mostrado um diagrama de blocos padrão de um sintetizador:
 
