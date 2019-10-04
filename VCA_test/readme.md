@@ -7,10 +7,10 @@ para a tensão de controle, que virá do envelope e também do LFO.
 
 Os parâmetros do envelope são:
 
-  - Atack: tempo para o sinal atingir o seu máximo
-  - Decay: tempo para o sinal decair até zero
-  - Sustain: amplitude de sustentação do sinal 
-  - Release: tempo de decaimento do até zero depois que a nota para de ser tocada
+  - Atack: tempo para o sinal atingir o seu máximo.
+  - Decay: tempo para o sinal decair até a amplitude de sustain.
+  - Sustain: amplitude de sustentação do sinal.
+  - Release: tempo de decaimento do sustain até zero depois que a nota para de ser tocada.
 
 ## Circuito de simulação
 
