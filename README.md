@@ -91,12 +91,13 @@ Serão utilizados neste projeto:
   O filtro poderá ser selecionado como Passa Baixa ou Passa Alta, onde será controlada sua frequência de cutoff e a amplitude da 
   frequência de resonância (cutoff). O envelope fará a modulação da dinâmica do filtro. Os parâmetros controlados são:
   
-   - Seletor do tipo de filtro. PA ou PB.
    - Controle da frequência de corte (cutoff).
    - Controle da frequência de resonância.
-   - Atack, que é o tempo que o filtro leva para atingir o máximo.
-   - Decay, que é o tempo que o filtro leva para deixar de agir.
-   - Sustain, amplitude mínima que ficará ao final do decay.
+   - Atack, que é o tempo que o filtro leva para atingir o ponto da frequência de corte.
+   - Decay, que é o tempo que o filtro leva para  atingir o nível de sustain.
+   - Sustain, amplitude que ficará sustentada.
+   
+   Basicamente, o envelope realizará as modulações acima descritas como se fosse um controle manual no pot de frequência.
    
 O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e o circuito envelope modula um sinal de tensão de controle, que irá modular a dinâmica do filtro conforme sua envoltória.
   
@@ -106,9 +107,9 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   
    - Controle do ganho total.
    - Atack, tempo para atingir a amplitude máxima.
-   - Decay, tempo para atingir a amplitude mímima.
-   - Sustain, amplitude mínima que ficará ao final do decay.
-   - Release, tempo que a nota continuará soando após ser encerrada o sinal MIDI, prolongamento.
+   - Decay, tempo para decair até a amplitude de sustain.
+   - Sustain, amplitude que ficará sustentada.
+   - Release, tempo que amplitude levará para chegar a zero, após ser encerrada o sinal MIDI, prolongamento.
    
    O envelope age da mesma forma que no VCF, onde fará aqui, a modulação do sinal na sua amplitude.
   
