@@ -2,7 +2,8 @@
 
 O circuito VCF é um filtro que tem sua frequência de corte controlada por tensão, e junto com o envelope produz as modulações 
 na frequência central que estiver ajustada. O VCF possui a entrada do sinal do áudio e a entrada para a tensão de controle, 
-que virá do envelope e também do LFO. A frequência central é controlada por um potenciômetro.
+que virá do envelope e também do LFO. A frequência central é controlada por um potenciômetro. Há também um potenciômetro para 
+o controle da ressonância na frequência de corte.
 
 Os parâmetros do envelope são:
 
