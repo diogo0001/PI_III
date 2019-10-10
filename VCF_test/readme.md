@@ -12,9 +12,9 @@ Os parâmetros do envelope são:
 
 ## Circuito de simulação
 
-![]()
+![vcf]()
 
-![]()
+![envelope]()
 
 ### Resultado da simulação:
 
