@@ -68,10 +68,11 @@ Este é um esboço 3D de como será o projeto:
 Serão utilizados neste projeto:
 
   - uC [stm32f103C8T6](https://www.curtocircuito.com.br/placa-arm-stm32-stm32f103c8t6.html) (Blue Pill): microcontrolador de 32 bits. 
-  Possui resolução de PWM de 16 bits e 2 portas SPI. Aqui está seu [datasheet](https://github.com/diogo0001/PI_III/blob/master/STM32_docs_codes/docs/stm32%20series%20datasheet.pdf)
+  Possui resolução de PWM de 16 bits e 2 portas SPI. Aqui está seu [datasheet](https://github.com/diogo0001/PI_III/blob/master/STM32_docs_codes/docs/stm32%20series%20datasheet.pdf).
   ![](https://github.com/diogo0001/PI_III/blob/master/STM32_docs_codes/docs/stm32-Bluepill_pinout.png)
   - CI ICL8038: gera onda senoide, quadrada e triangular, com ajuste de pwm, pode gerar dente de serra. Aqui está seu [datasheet](http://www.mit.edu/~6.331/icl8038data.pdf). (Foram feitos testes , e este acabou sendo descartado do projeto)
   - CI AD9833: gera formas de onda com comunicação SPI, e controle digital. Aqui está seu [datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/AD9833.pdf).
+  [](https://github.com/diogo0001/PI_III/blob/master/Images/ad9833.PNG)
   - Instrumentação: gerador de sinal e osciloscópio para os testes.
   - Componentes eletrônicos: para a parte analógica.
   - Confecção PCI: para implementar o circuito.
