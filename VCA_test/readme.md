@@ -35,9 +35,7 @@ Em rosa: sinal de áudio original.
 ### Envelope
 ![](https://github.com/diogo0001/PI_III/blob/master/VCA_test/TEK0000.JPG)
 
-![](hhttps://github.com/diogo0001/PI_III/blob/master/VCA_test/TEK0001.JPG)
-
-![](https://github.com/diogo0001/PI_III/blob/master/VCA_test/TEK0002.JPG)
+![](https://github.com/diogo0001/PI_III/blob/master/VCA_test/TEK0001.JPG)
 
 ![](https://github.com/diogo0001/PI_III/blob/master/VCA_test/TEK0002.JPG)
 
