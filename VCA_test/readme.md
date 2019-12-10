@@ -43,4 +43,6 @@ Em rosa: sinal de áudio original.
 
 ### VCA
 
+Teste do sinal com modulação por LFO
+
 ![](https://github.com/diogo0001/PI_III/blob/master/VCA_test/vca_lfo_osciloscope.png)
