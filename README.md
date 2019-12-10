@@ -152,15 +152,27 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   duty cycle varia. A regulagem para a frequência do LFO é feita por um potenciômetro lido pelo ADC do STM32. Um filtro passa baixa
   é utilizado na saída no uC, e um potenciômetro na parte R do filtro RC será responsável intensidade da amplitude do LFO. Os resultados
   dos testes do LFO podem ser vistos [aqui](https://github.com/diogo0001/PI_III/blob/master/LFO_test/readme.md).
-  
-  Após todas as partes do sistema serem implementadas e testadas, iniciou-se a integração de todo o sistema, as etapas adotadas
-  e os resultados podem ser vistos [aqui](https://github.com/diogo0001/PI_III/tree/master/System_Integration_test).
-  
+   
   Para a montagem final do sistema, foram criadas placas de circuito impresso (PCIs) em módulos, de modo que ficasse mais prático
   o desenvolvimento e correção de erros, os layouts das placas e as mesmas montadas podem ser vistas [aqui](https://github.com/diogo0001/PI_III/blob/master/Board_layout/readme.md).
   Os resultados finais, com o sistema todo montado, integrado e e em funcionamento, bem como os vídeos, podem ser vistos [aqui](https://github.com/diogo0001/PI_III/tree/master/Final_results). 
   
   ### Conclusão
+  
+  O projeto teve alguns desafios, e algumas mudanças de planos. Uma delas foi a troca do método de geração das ondas, trocando o CI. 
+  A parte de processamento também apresentou alguns comportamentos que podem ser aprimorados, como o a velocidade para tocar as notas,
+  e a defasagem aleatória entre as ondas. 
+  
+  A parte analógica também teve muitos detalhes que tiveram que ser ajustados para funcionar corretamente, detalhes como polaridade dos potenciômetros, cuidados com a colocação dos componentes, possíveis componentes danificados, etc.
+  
+  A metodologia utilizada de desenvolvimento por blocos facilitou bastante o processo, onde cada parte sendo validade independentemente.
+  Inclusive me placas diferentes.
+  
+  Devido ao tempo, e algumas condições para o desenvolvimento, como contratempos e imprevistos, que ocasionaram em algumas correções
+  (como o cobre descolar das placas facilmente), nos levaram à simplificação do projeto. Foi omitida a implementação de uma placa 
+  de envelope, sendo a desenvolvida aplicada ao VCA, que também pode ter o LFO. No VCF foi aplicado somente o LFO.
+  
+  Os resultados apresentados demostram que houve sucesso na implementação, e o processo foi importante para a experiência no desenvolvimento deste tipo de equipamento. Os desafios e sucessos trouxeram um bom conhecimento para futuros aprimoramentos
   
   ### Referências
   
