@@ -19,14 +19,28 @@ Os parâmetros do envelope são:
 
 ### Resultado da simulação:
 
-Em amarelo: sinal do envelope.
-
-Em azul: sinal de áudio modulado.
-
-Em rosa: sinal de áudio original.
-
-![]()
-
+A simulação não presentou resultados satisfatórios, e alguns resultados são mostrados a seguir:
 
 
 ## Resultados práticos
+
+ Como na simulação não houve um resultado satisfatório, tentou-se implementar o circuito para 
+ verificar o que poderia ocorrer na prática. O circuito gera muita distorção do sinal como é mostrado a seguir:
+ 
+ Cuttof no mínimo e sem ressonância:
+ 
+ ![](https://github.com/diogo0001/PI_III/blob/master/VCF_test/cuttof_min_no_res.png)
+ 
+ Cuttof no mínimo e com ressonância
+ 
+ ![](https://github.com/diogo0001/PI_III/blob/master/VCF_test/cuttof_min_and_res.png)
+ 
+ Cuttof no máximo e sem ressonância
+ 
+ ![](https://github.com/diogo0001/PI_III/blob/master/VCF_test/cuttof_max_no_res.png)
+ 
+ Cuttof no máximo e com ressonância
+ 
+ ![](https://github.com/diogo0001/PI_III/blob/master/VCF_test/cuttof_max_and_res.png)
+ 
+ 
