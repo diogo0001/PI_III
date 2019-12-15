@@ -25,7 +25,9 @@ A simulação não presentou resultados satisfatórios, e alguns resultados são
 ## Resultados práticos
 
  Como na simulação não houve um resultado satisfatório, tentou-se implementar o circuito para 
- verificar o que poderia ocorrer na prática. O circuito gera muita distorção do sinal como é mostrado a seguir:
+ verificar o que poderia ocorrer na prática. O circuito gera muita distorção do sinal. A seguir são mostradas
+ as formas de onda variando os potenciômetros de Cuttof e ressonância: (azul- entrada, amarelo-saída)
+ 
  
  Cuttof no mínimo e sem ressonância:
  
