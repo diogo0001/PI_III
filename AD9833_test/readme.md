@@ -8,3 +8,8 @@ e o terceiro byte (0x5A) representa o volume. Para este projeto , o terceiro byt
 
 Através da placa controladora MIDI esses dados são tranferidos via serial para o microcontrolador e decodificados para a geração da onda na frequência da nota tocada.
 Para a geração das ondas , utilizamos o CI AD9833 que utiliza o protocolo SPI para comunicação.
+
+            ### FORMAS DE ONDAS GERADAS PELO CI AD9833 
+ 
+![foto](https://github.com/diogo0001/PI_III/blob/master/AD9833_test/senoidal_220Hz.PNG)
+ 
