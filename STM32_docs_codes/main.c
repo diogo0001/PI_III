@@ -633,31 +633,33 @@ void StartDefaultTask(void)
 	 AD9833reset();
 
 	 WriteRegister(0x2168,0x2168);
-	 WriteRegister(0xC000,0x2168);
+	 WriteRegister(0xC000,0xC000);
 
+	 WriteRegister(0x2000,0x2002);   // test
+	 AD9833setNote(220);            // test
 
-   for(;;)
-     {
-
-	  WriteRegister(selectWave2(1),selectWave2(1));   // Define AD9833's waveform register value.
-
-
-	   HAL_UART_Receive(&huart1, (uint8_t *)in, 1, 1000);
-
-          if  (in[0] == 0x90)
-
-	     {
-
-	    	 HAL_UART_Receive(&huart1, (uint8_t *)in, 1, 1000);
-
-        	  AD9833setNote(notes[in[0]]);
-
-         	  HAL_UART_Receive(&huart1, (uint8_t *)in, 1, 1000);
-        	if (in[0] == 0x00)
-        		AD9833setNote(notes[0xF0]);
-	     }
-
-	  }
+//   for(;;)
+//     {
+//
+//	  WriteRegister(selectWave2(1),selectWave2(1));   // Define AD9833's waveform register value.
+//
+//
+//	   HAL_UART_Receive(&huart1, (uint8_t *)in, 1, 1000);
+//
+//          if  (in[0] == 0x90)
+//
+//	     {
+//
+//	    	 HAL_UART_Receive(&huart1, (uint8_t *)in, 1, 1000);
+//
+//        	  AD9833setNote(notes[in[0]]);
+//
+//         	  HAL_UART_Receive(&huart1, (uint8_t *)in, 1, 1000);
+//        	if (in[0] == 0x00)
+//        		AD9833setNote(notes[0xF0]);
+//	     }
+//
+//	  }
 
 
 
@@ -686,7 +688,7 @@ void AD9833setNote(uint16_t frequency)
 		  MSB |= 0x4000;
 
 		  WriteRegister(LSB,LSB);                  // Write lower 16 bits to AD9833 registers
-		  WriteRegister(MSB,LSB);                  // Write upper 16 bits to AD9833 registers.
+		  WriteRegister(MSB,MSB);                  // Write upper 16 bits to AD9833 registers.
 		                               // Exit & Reset to SINE, SQUARE or TRIANGLE
 
 
@@ -710,10 +712,10 @@ void WriteRegister (uint16_t data, uint16_t data2){
 
 
 	    HAL_SPI_Transmit(&hspi1, &spi_tx_MB, 1, 1000);
-	   HAL_SPI_Transmit(&hspi2, &spi_tx_MB2, 1, 1000);
-
 	    HAL_SPI_Transmit(&hspi1, &spi_tx_LB, 1, 1000);
-	   HAL_SPI_Transmit(&hspi2, &spi_tx_LB2, 1, 1000);
+
+	    HAL_SPI_Transmit(&hspi2, &spi_tx_MB2, 1, 1000);
+	    HAL_SPI_Transmit(&hspi2, &spi_tx_LB2, 1, 1000);
 
 
 	    delay_us (10);
