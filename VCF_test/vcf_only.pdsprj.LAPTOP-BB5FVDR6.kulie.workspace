@@ -4,6 +4,7 @@
   <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffffcb010000a400000056050000d8020000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
   <WINDOW type="default" module="ARES"/>
+  <WINDOW type="default" module="VSMDEBUG"/>
  </FRAME>
  <MODULE name="VSMDEBUG">
   <PWI>
@@ -39,10 +40,10 @@
    <POPUP w="511" x="820" flags="00000000" y="551" h="147" pid="0" iid="16">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="695" x="650" flags="00000001" y="0" h="453" pid="0" iid="10">
+   <POPUP w="695" x="1512" flags="00008001" y="163" h="453" pid="0" iid="10">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="511" x="98" flags="00008001" y="76" h="147" pid="0" iid="14">
+   <POPUP w="511" x="98" flags="00000001" y="76" h="147" pid="0" iid="14">
     <PROPERTIES/>
    </POPUP>
   </PWI>
