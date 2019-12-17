@@ -16,20 +16,6 @@ A simulação não presentou resultados satisfatórios, gerando distorção do s
 ![](https://github.com/diogo0001/PI_III/blob/master/VCF_test/vcf_sim.PNG)
 
 
-### Implementação alternativa
-
-Foi implementada uma alternativa utilizando um filtro passa paixa com LDR controlado poe LED. Este circuito 
-foi incorporado junto ao mixer: 
-
-![](https://github.com/diogo0001/PI_III/blob/master/VCF_test/Capturar.PNG)
-
-A seguir, o circuito de amplificação para o LFO que seria implementado:
-
-![](https://github.com/diogo0001/PI_III/blob/master/VCF_test/LFO_amp.PNG)
-
-Esta implementação foi feita diretamente em protoboard, testando diretamente com gerador de sinais.
-
-
 ## Resultados práticos do VCF
 
  Como na simulação não houve um resultado satisfatório, tentou-se implementar o circuito para 
@@ -54,3 +40,15 @@ Esta implementação foi feita diretamente em protoboard, testando diretamente c
  ![](https://github.com/diogo0001/PI_III/blob/master/VCF_test/cuttof_max_and_res.png)
  
  
+ ### Implementação alternativa
+
+Foi implementada uma alternativa utilizando um filtro passa paixa com LDR controlado poe LED. Este circuito 
+foi incorporado junto ao mixer: 
+
+![](https://github.com/diogo0001/PI_III/blob/master/VCF_test/Capturar.PNG)
+
+A seguir, o circuito de amplificação para o LFO que seria implementado:
+
+![](https://github.com/diogo0001/PI_III/blob/master/VCF_test/LFO_amp.PNG)
+
+Esta implementação foi feita diretamente em protoboard, testando diretamente com gerador de sinais.
