@@ -12,4 +12,9 @@ Para a geração das ondas , utilizamos o CI AD9833 que utiliza o protocolo SPI 
             ### FORMAS DE ONDAS GERADAS PELO CI AD9833 
  
 ![foto](https://github.com/diogo0001/PI_III/blob/master/AD9833_test/senoidal_220Hz.PNG)
+
+![foto](https://github.com/diogo0001/PI_III/blob/master/AD9833_test/triangular_220Hz.PNG)
+
+![foto](https://github.com/diogo0001/PI_III/blob/master/AD9833_test/senoidal_220Hz.PNG)
+
  
