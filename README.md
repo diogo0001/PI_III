@@ -95,25 +95,28 @@ Serão utilizados neste projeto:
   
    - Controle da frequência de corte (cutoff).
    - Controle da frequência de resonância.
-   - Atack, que é o tempo que o filtro leva para atingir o ponto da frequência de corte.
-   - Decay, que é o tempo que o filtro leva para  atingir o nível de sustain.
-   - Sustain, amplitude que ficará sustentada.
-   
+   - Parâmetros do envelope ou LFO
+
    Basicamente, o envelope realizará as modulações acima descritas como se fosse um controle manual no pot de frequência.
-   
-O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e o circuito envelope modula um sinal de tensão de controle, que irá modular a dinâmica do filtro conforme sua envoltória.
   
   #### Parâmetros do VCA
   
   O bloco do controle de amplitude tem os seguintes parâmetros a serem controlados:
   
    - Controle do ganho total.
+   - Controle do offset da tensão de controle.
+   - Parâmetros do envelope e LFO
+   
+  #### Parâmetros do envelope
+  
    - Atack, tempo para atingir a amplitude máxima.
    - Decay, tempo para decair até a amplitude de sustain.
    - Sustain, amplitude que ficará sustentada.
    - Release, tempo que amplitude levará para chegar a zero, após ser encerrada o sinal MIDI, prolongamento.
    
-   O envelope age da mesma forma que no VCF, onde fará aqui, a modulação do sinal na sua amplitude.
+   O envelope age da mesma forma que no VCF, onde fará aqui, a modulação do sinal em amplitude ou frequência.
+Este recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e o circuito envelope modula um sinal de 
+tensão de controle.
   
   #### Parâmetros do LFO
   
@@ -148,14 +151,17 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   Paralelamente ao desenvolvimento do sistema para o MIDI, foi feita a pesquisa e testes para os circuitos de envelope, VCA e VCF.
   Os resultados dos testes isolados para o VCA com envelope podem ser vistos [aqui](https://github.com/diogo0001/PI_III/blob/master/VCA_test/readme.md), e para o VCF com envelope pode ser visto [aqui](https://github.com/diogo0001/PI_III/tree/master/VCF_test).
   
-  Foi feita a implementação do LFO por software, onde a variação da amplitude será gerada por PWM, e a frequência será a taxa que o
-  duty cycle varia. A regulagem para a frequência do LFO é feita por um potenciômetro lido pelo ADC do STM32. Um filtro passa baixa
-  é utilizado na saída no uC, e um potenciômetro na parte R do filtro RC será responsável intensidade da amplitude do LFO. Os resultados
-  dos testes do LFO podem ser vistos [aqui](https://github.com/diogo0001/PI_III/blob/master/LFO_test/readme.md).
+  Seria feita a implementação do LFO por software, onde a variação da amplitude será gerada por PWM, e a frequência será a taxa que o
+  duty cycle varia. A regulagem para a frequência do LFO seria feita por um potenciômetro lido pelo ADC do STM32. Um filtro passa baixa
+  é utilizado na saída no uC, e um potenciômetro na saída do amplificador controlaria a amplitude do LFO. Porém, na prática este bloco não chegou a ser implementado.
    
   Para a montagem final do sistema, foram criadas placas de circuito impresso (PCIs) em módulos, de modo que ficasse mais prático
-  o desenvolvimento e correção de erros, os layouts das placas e as mesmas montadas podem ser vistas [aqui](https://github.com/diogo0001/PI_III/blob/master/Board_layout/readme.md).
-  Os resultados finais, com o sistema todo montado, integrado e e em funcionamento, bem como os vídeos, podem ser vistos [aqui](https://github.com/diogo0001/PI_III/tree/master/Final_results). 
+  o desenvolvimento e correção de erros, os layouts das placas e as mesmas montadas podem ser vistas [aqui](https://github.com/diogo0001/PI_III/blob/master/Board_layout/Layout_To_print).
+  
+Infelizmente, o sistema todo não foi completamente integrado, tendo faltado a implementação de algumas etapas para o controle bem como a placa da parte digital. A idéia seria ter mais controles para as oitavas dos osciladores, LFO, e realimentação para detectar quando a nota vai à zero.
+
+Foi feito um vídeo apresentando os resultados, e, mesmo cortando em partes menores este não pode ser exibido aqui, mas estão disponíveis
+ para download [aqui](https://github.com/diogo0001/PI_III/tree/master/Videos).
   
   ### Conclusão
   
@@ -165,14 +171,13 @@ O envelope recebe o trigger do sinal MIDI enviado enquanto a nota está em ON, e
   
   A parte analógica também teve muitos detalhes que tiveram que ser ajustados para funcionar corretamente, detalhes como polaridade dos potenciômetros, cuidados com a colocação dos componentes, possíveis componentes danificados, etc.
   
-  A metodologia utilizada de desenvolvimento por blocos facilitou bastante o processo, onde cada parte sendo validade independentemente.
+  A metodologia utilizada de desenvolvimento por blocos facilitou bastante o processo, onde cada parte sendo validada independentemente.
   Inclusive me placas diferentes.
   
-  Devido ao tempo, e algumas condições para o desenvolvimento, como contratempos e imprevistos, que ocasionaram em algumas correções
-  (como o cobre descolar das placas facilmente), nos levaram à simplificação do projeto. Foi omitida a implementação de uma placa 
-  de envelope, sendo a desenvolvida aplicada ao VCA, que também pode ter o LFO. No VCF foi aplicado somente o LFO.
+  Devido ao tempo, e algumas condições para o desenvolvimento, como contratempos e imprevistos, que ocasionaram em algumas correções, nos levaram à simplificação do projeto. Foi omitida a implementação de uma placa de envelope, sendo a desenvolvida aplicada ao VCA, que também pode ter o LFO. No VCF foi aplicado somente o LFO por gerador de 
+  sinais nos testes.
   
-  Os resultados apresentados demostram que houve sucesso na implementação, e o processo foi importante para a experiência no desenvolvimento deste tipo de equipamento. Os desafios e sucessos trouxeram um bom conhecimento para futuros aprimoramentos
+  Os resultados apresentados demostram que, apesar de tudo, houve sucesso na implementação dos blocos, e o processo foi importante para a experiência no desenvolvimento deste tipo de equipamento. Os desafios e sucessos trouxeram um bom conhecimento para futuros aprimoramentos.
   
   ### Referências
   
