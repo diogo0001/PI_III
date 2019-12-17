@@ -27,6 +27,8 @@ A seguir, o circuito de amplificação para o LFO que seria implementado:
 
 ![](https://github.com/diogo0001/PI_III/blob/master/VCF_test/LFO_amp.PNG)
 
+Esta implementação foi feita diretamente em protoboard, testando diretamente com gerador de sinais.
+
 
 ## Resultados práticos do VCF
 
