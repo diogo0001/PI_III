@@ -75,15 +75,14 @@ static void MX_ADC2_Init(void);
 typedef uint32_t u32;
 const float refFreq = 25000000.0;
 
-void StartDefaultTask(void);
-void AD9833reset(void);
-//void AD9833setFrequency(uint16_t frequency, uint16_t waveform);
-void WriteRegister (uint16_t data,uint16_t data2);
+void StartDefaultTask(void);  //função para principal -
+void AD9833reset(void);       // reseta o ad
+void WriteRegister (uint16_t data,uint16_t data2); // SPI para os registradores do AD
 void delay_us(u32 nus);
-void AD9833setNote(uint16_t frequency);
-uint16_t selectWave1(uint8_t w);
-uint16_t selectWave2(uint8_t w);
-uint16_t  readLFO(void);
+void AD9833setNote(uint16_t frequency); // recebe protocolo midi pela uart e aciona o ad com a frequencia
+uint16_t selectWave1(void);  //seleciona forma de onda para o osc 01
+uint16_t selectWave2(void);  //seleciona forma de onda para o osc 02
+uint16_t  readLFO(void);  // LFO nao finalizado ate o momento mas com pwm ja configurado para posterior uso.
 
 /* USER CODE END PFP */
 
@@ -97,8 +96,6 @@ uint8_t nt[1];    // note
 uint8_t vl[1];    // velocity
 
 char vt[4];
-uint8_t tx_buff[] = {0,1,2,3};
-uint8_t rx_buff[4];
 uint16_t notes[] = {16,17,18,19,20,110,22,23,24,27,29,30,33,
                   34,36,39,41,43,46,48,51,55,58,65,69,73,
                   77,82,87,92,97,103,110,116,123,130,138,
@@ -635,33 +632,33 @@ void StartDefaultTask(void)
 	 WriteRegister(0x2168,0x2168);
 	 WriteRegister(0xC000,0xC000);
 
-	 WriteRegister(0x2000,0x2002);   // test
-	 AD9833setNote(220);            // test
+//	 WriteRegister(0x2000,0x2002);   // test descomentar
+//	 AD9833setNote(220);            // test
+                                                  //-----------------------------------------------------COMENTAR ABAIXO  TESTE AD
+   for(;;)
+     {
 
-//   for(;;)
-//     {
-//
-//	  WriteRegister(selectWave2(1),selectWave2(1));   // Define AD9833's waveform register value.
-//
-//
-//	   HAL_UART_Receive(&huart1, (uint8_t *)in, 1, 1000);
-//
-//          if  (in[0] == 0x90)
-//
-//	     {
-//
-//	    	 HAL_UART_Receive(&huart1, (uint8_t *)in, 1, 1000);
-//
-//        	  AD9833setNote(notes[in[0]]);
-//
-//         	  HAL_UART_Receive(&huart1, (uint8_t *)in, 1, 1000);
-//        	if (in[0] == 0x00)
-//        		AD9833setNote(notes[0xF0]);
-//	     }
-//
-//	  }
+	  WriteRegister(selectWave1(),selectWave2());
 
 
+	   HAL_UART_Receive(&huart1, (uint8_t *)in, 1, 1000);
+
+          if  (in[0] == 0x90)
+
+	     {
+
+	    	 HAL_UART_Receive(&huart1, (uint8_t *)in, 1, 1000);
+
+        	  AD9833setNote(notes[in[0]]);
+
+         	  HAL_UART_Receive(&huart1, (uint8_t *)in, 1, 1000);
+        	if (in[0] == 0x00)
+        		AD9833setNote(notes[0xF0]);
+	     }
+  //        AD9833setNote(220);
+  }
+
+                                                      //---------------------------------------------------COMENTAR ACIMA TEST AD
 
  }
 
@@ -729,7 +726,7 @@ void WriteRegister (uint16_t data, uint16_t data2){
 
 }
 
-uint16_t selectWave1(uint8_t w){
+uint16_t selectWave1(void){
 
 	 uint32_t analog_val_1 = 0;
 
@@ -746,7 +743,7 @@ uint16_t selectWave1(uint8_t w){
 			        	 return 0x2000;             //SINE
 			         else{
 			        	 if (analog_val_1 <= 2684){
-			        		 return 0x2002;         // TRIANGLE
+		        		 return 0x2002;         // TRIANGLE
 			        	 }
 			        	 else{
 			        		 return 0x2028;        // SQUARE
@@ -760,7 +757,7 @@ uint16_t selectWave1(uint8_t w){
 	 }
 }
 
-uint16_t selectWave2(uint8_t w){
+uint16_t selectWave2(void){
 
 	 uint32_t analog_val_1 = 0;
 
