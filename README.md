@@ -84,7 +84,6 @@ Serão utilizados neste projeto:
   Haverão 2 VCOs que serão mixados, de acordo com o que for desejado. Cada canal terá os seguintes controles:
   
    - Seletor do tipo de onda. Senóide, quadrada e triangular. 
-   - Controle do ganho.
    - Seletor de oitava. Seleciona se será exatamente a frequência da nota, metade, ou o dobro. Opção para aumetar as possibilidades 
    para a mixagem das ondas. Este controle é enviado para pinos digitais do uC, que enviará a respectiva oitava. 
   
