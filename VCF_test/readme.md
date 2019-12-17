@@ -3,26 +3,32 @@
 O circuito VCF é um filtro que tem sua frequência de corte controlada por tensão, e junto com o envelope produz as modulações 
 na frequência central que estiver ajustada. O VCF possui a entrada do sinal do áudio e a entrada para a tensão de controle, 
 que virá do envelope e também do LFO. A frequência central é controlada por um potenciômetro. Há também um potenciômetro para 
-o controle da ressonância na frequência de corte.
-
-Os parâmetros do envelope são:
-
-  - Atack: tempo para a frequência de corte (cutoff) atingir o ponto que está ajustada.
-  - Decay: tempo para o cuttof chegar até o sustain.
-  - Sustain: frequência de corte estática.
+o controle da ressonância na frequência de corte. O envelope é um circuito igual para o VCA.
 
 ## Circuito de simulação
 
-![vcf]()
-
-![envelope]()
+![vcf](https://github.com/diogo0001/PI_III/blob/master/VCF_test/vcf_schematic.PNG)
 
 ### Resultado da simulação:
 
-A simulação não presentou resultados satisfatórios, e alguns resultados são mostrados a seguir:
+A simulação não presentou resultados satisfatórios, gerando distorção do sinal.
+
+![](https://github.com/diogo0001/PI_III/blob/master/VCF_test/vcf_sim.PNG)
 
 
-## Resultados práticos
+### Implementação alternativa
+
+Foi implementada uma alternativa utilizando um filtro passa paixa com LDR controlado poe LED. Este circuito 
+foi incorporado junto ao mixer: 
+
+![](https://github.com/diogo0001/PI_III/blob/master/VCF_test/Capturar.PNG)
+
+A seguir, o circuito de amplificação para o LFO que seria implementado:
+
+![](https://github.com/diogo0001/PI_III/blob/master/VCF_test/LFO_amp.PNG)
+
+
+## Resultados práticos do VCF
 
  Como na simulação não houve um resultado satisfatório, tentou-se implementar o circuito para 
  verificar o que poderia ocorrer na prática. O circuito gera muita distorção do sinal. A seguir são mostradas
